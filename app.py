@@ -197,6 +197,13 @@ if page == "Dashboard":
             st.write("📜 IBM Data Science Professional Certificate")
             st.write("📜 Machine Learning Specialization")
 
+        st.header("🌐 Learning Platforms")
+
+        st.write("📚 Coursera")
+        st.write("📚 Udemy")
+        st.write("📚 Microsoft Learn")
+        st.write("📚 Kaggle Learn")
+        
         st.header("🤖 AI Career Tips")
 
         if career == "Data Analyst":
