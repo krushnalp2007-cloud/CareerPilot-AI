@@ -191,7 +191,7 @@ required = {
         "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
 missing = []
-career = st.session_state.career
+
 if career in required:
     for skill in required[career]:
         if skill.lower() not in skills.lower():
