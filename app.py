@@ -108,19 +108,19 @@ if page == "Dashboard":
         st.header("📁 Portfolio Builder Agent")
 
         if career == "Data Analyst":
-        st.write("• Sales Dashboard")
-        st.write("• HR Analytics Dashboard")
-        st.write("• Customer Churn Analysis")
+            st.write("• Sales Dashboard")
+            st.write("• HR Analytics Dashboard")
+            st.write("• Customer Churn Analysis")
 
         elif career == "AI Engineer":
-        st.write("• Resume Analyzer")
-        st.write("• Chatbot")
-        st.write("• AI Career Coach")
+            st.write("• Resume Analyzer")
+            st.write("• Chatbot")
+            st.write("• AI Career Coach")
 
         elif career == "Software Developer":
-        st.write("• Task Manager App")
-        st.write("• Portfolio Website")
-        st.write("• E-Commerce Website")
+            st.write("• Task Manager App")
+            st.write("• Portfolio Website")
+            st.write("• E-Commerce Website")
 
         st.header("📄 Resume Review Agent")
 
