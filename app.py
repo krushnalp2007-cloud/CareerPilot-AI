@@ -147,9 +147,8 @@ if page == "Dashboard":
     if st.button("Analyze Skills"):
         st.session_state.analyzed = True
 
-       if 'resume' in locals() and resume:
-           st.success("Resume Uploaded Successfully")
-
+    if resume:
+        st.success("Resume Uploaded Successfull")
 
         col1,col2,col3,col4 = st.columns(4)
 
