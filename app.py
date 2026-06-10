@@ -275,21 +275,21 @@ for skill in missing:
         st.markdown(f"📚 [{skill} Course]({resources[skill]})")
 st.header("🏆 Recommended Certifications")
 
-        if career == "Data Analyst":
-            st.write("📜 Google Data Analytics Certificate")
-            st.write("📜 Microsoft Power BI Certificate")
+if career == "Data Analyst":
+    st.write("📜 Google Data Analytics Certificate")
+    st.write("📜 Microsoft Power BI Certificate")
 
-        elif career == "AI Engineer":
-            st.write("📜 Machine Learning Specialization")
-            st.write("📜 Deep Learning Specialization")
+elif career == "AI Engineer":
+    st.write("📜 Machine Learning Specialization")
+    st.write("📜 Deep Learning Specialization")
 
-        elif career == "Software Developer":
-            st.write("📜 Meta Backend Developer")
-            st.write("📜 Python Programming Certificate")
+elif career == "Software Developer":
+    st.write("📜 Meta Backend Developer")
+    st.write("📜 Python Programming Certificate")
 
-        elif career == "Data Scientist":
-            st.write("📜 IBM Data Science Professional Certificate")
-            st.write("📜 Machine Learning Specialization")
+elif career == "Data Scientist":
+    st.write("📜 IBM Data Science Professional Certificate")
+    st.write("📜 Machine Learning Specialization")
 
         st.header("🌐 Learning Platforms")
 
