@@ -214,18 +214,20 @@ match_percent = int(
 )   
 
 st.progress(match_percent)
+
 st.success(f"Skill Match: {match_percent}%")
+
 report_text = f"""
 Career Goal: {career}
 Missing Skills: {", ".join(missing)}
-    Skill Match: {match_percent}%
-    """
+Skill Match: {match_percent}%
+"""
 
-    st.download_button(
-        "📥 Download Career Report",
-        report_text,
-        file_name="career_report.txt"
-    )
+st.download_button(
+     "📥 Download Career Report",
+     report_text,
+     file_name="career_report.txt"
+)
     left,right = st.columns(2)
     st.header("🛣 Career Roadmap")
     
