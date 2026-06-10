@@ -175,7 +175,7 @@ if page == "Dashboard":
     
     st.markdown("---")    
 
-        skills_df = pd.DataFrame({
+    skills_df = pd.DataFrame({
             "Skill": ["Python", "SQL", "Power BI", "Statistics"],
             "Score": [85, 75, 65, 60]
         })
