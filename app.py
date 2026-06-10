@@ -70,22 +70,29 @@ if page == "Dashboard":
 st.title("🚀 CareerPilot AI")
 st.subheader("Multi-Agent Career & Skill Development Assistant")
 
-name = st.text_input("Enter Your Name")
+if page == "Skill Analysis":
 
-career = st.selectbox(
-    "Select Career Goal",
-    [
-        "Data Analyst",
-        "AI Engineer",
-        "Software Developer",
-        "Data Scientist"
-    ]
-)
+    st.header("📊 Skill Analysis")
 
-skills = st.text_area(
-    "Enter Your Skills (comma separated)",
-    placeholder="Python, SQL, Excel"
-)
+    name = st.text_input("Enter Your Name")
+
+    career = st.selectbox(
+        "Select Career Goal",
+        [
+            "Data Analyst",
+            "AI Engineer",
+            "Software Developer",
+            "Data Scientist"
+        ]
+    )
+
+    skills = st.text_area(
+        "Enter Your Skills (comma separated)",
+        placeholder="Python, SQL, Excel"
+    )
+
+    if st.button("Analyze Skills"):
+        st.success("Analysis Complete")
 
 if st.button("Analyze Skills"):
 
