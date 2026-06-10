@@ -215,21 +215,21 @@ if page == "Dashboard":
             st.header("🎯 Recommended Jobs")
 
         if career == "Data Analyst":
-           st.write("• Junior Data Analyst")
-           st.write("• Business Analyst")
-           st.write("• Reporting Analyst")
+            st.write("• Junior Data Analyst")
+            st.write("• Business Analyst")
+            st.write("• Reporting Analyst")
 
         elif career == "AI Engineer":
-           st.write("• AI Engineer")
-           st.write("• Machine Learning Engineer")
+            st.write("• AI Engineer")
+            st.write("• Machine Learning Engineer")
 
         elif career == "Software Developer":
-           st.write("• Python Developer")
-           st.write("• Full Stack Developer")
+            st.write("• Python Developer")
+            st.write("• Full Stack Developer")
         
-       elif career == "Data Scientist":
-           st.write("• Data Scientist")
-           st.write("• Machine Learning Engineer")
+        elif career == "Data Scientist":
+            st.write("• Data Scientist")
+            st.write("• Machine Learning Engineer")
        st.header("💰 Salary Insights")
 
        if career == "Data Analyst":
