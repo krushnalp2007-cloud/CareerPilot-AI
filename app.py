@@ -70,6 +70,11 @@ if page == "Dashboard":
     if page == "Skill Analysis":
 
         st.title("🚀 CareerPilot AI")
+        st.markdown("""
+        ## Welcome to CareerPilot AI
+
+        AI-Powered Career Guidence Platform
+        """)
         st.subheader("Multi-Agent Career & Skill Development Assistant")
     
 
@@ -120,6 +125,17 @@ if page == "Dashboard":
 
         st.progress(match_percent)
         st.success(f"Skill Match: {match_percent}%")
+        report_text = f"""
+        Career Goal: {career}
+        Missing Skills: {", ".join(missing)}
+        Skill Match: {match_percent}%
+        """
+
+        st.download_button(
+            "📥 Download Career Report",
+            report_text,
+            file_name="career_report.txt"
+        )
         st.header("🛣 Career Roadmap")
 
         if career == "Data Analyst":
@@ -271,6 +287,14 @@ if page == "Dashboard":
 
         for tip in tips:
             st.write("✅", tip)
+   
+        st.success("🎉 Career Analysis Completed Successfully!")
+
+        st.markdown("---")
+
+        st.markdown("""
+        <center>
+        ...  
         st.markdown("---")
 
         st.markdown(
