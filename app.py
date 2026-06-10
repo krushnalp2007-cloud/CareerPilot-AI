@@ -7,6 +7,20 @@ st.set_page_config(
     page_icon="🚀",
     layout="wide"
 )
+
+if "career" not in st.session_state:
+    st.session_state["career"] = "Data Analyst"
+
+page = st.sidebar.radio(
+    "Navigation",
+    ["Dashboard", "Skill Analysis", "Learning Path"]
+)
+
+st.set_page_config(
+    page_title="CareerPilot AI",
+    page_icon="🚀",
+    layout="wide"
+)
 st.markdown("""
 <style>
 
@@ -133,10 +147,12 @@ if page == "Dashboard":
 
          name = st.text_input("Enter Your Name")
 
-         career = st.selectbox(
+        st.session_state["career"] = st.selectbox(
             "Select Career Goal",
-            ["Data Analyst", "AI Engineer", "Software Developer", "Data Scientist"]
-         )
+            ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
+        )
+
+        career = st.session_state["career"]
 
          skills = st.text_area("Enter Your Skills")
 
@@ -191,6 +207,7 @@ required = {
         "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
 missing = []
+career = st.session_state["career"]
 
 if career in required:
     for skill in required[career]:
