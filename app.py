@@ -150,8 +150,6 @@ if page == "Dashboard":
     if resume:
         st.success("Resume Uploaded Successfully")
 
-    if st.button("Analyze Skills"):
-        st.title("🚀 CareerPilot AI Dashboard")
 
         col1,col2,col3 = st.columns(3)
 
