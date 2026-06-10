@@ -152,10 +152,11 @@ if page == "Dashboard":
     st.title("🚀 CareerPilot AI Dashboard")
 
     st.markdown(f"""
-    ### Welcome, {name}
-    Career Goal: *{career}*
-    """)
+    # Welcome, {name} 👋
 
+    ### Career Goal: {career}
+    """)
+    st.markdown("---")
     col1,col2,col3,col4 = st.columns(4)
 
     with col1:
@@ -169,6 +170,8 @@ if page == "Dashboard":
 
     with col4:
         st.metric("Career Level", "Mid")
+    
+    st.markdown("---")    
         import pandas as pd
 
         skills_df = pd.DataFrame({
