@@ -190,17 +190,13 @@ required = {
         "Software Developer": ["Python", "Git", "Data Structures"],
         "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
-
 missing = []
 
 if career in required:
     for skill in required[career]:
         if skill.lower() not in skills.lower():
             missing.append(skill)
-
-for skill in required[career]:
-        if skill.lower() not in skills.lower():
-            missing.append(skill)
+missing = list(set(missing))
 
 st.subheader("Missing Skills")
 
@@ -216,6 +212,7 @@ match_percent = int(
     / len(required[career])) * 100
 )   
 
+match_percent = max(0, min(match_percent, 100))
 st.progress(match_percent)
 
 st.success(f"Skill Match: {match_percent}%")
