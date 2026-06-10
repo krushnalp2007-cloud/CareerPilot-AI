@@ -18,6 +18,19 @@ h1,h2,h3,h4,h5,h6 {
 </style>
 """, unsafe_allow_html=True)
 
+st.sidebar.title("🚀 CareerPilot AI")
+
+page = st.sidebar.radio(
+    "Navigation",
+    [
+        "Dashboard",
+        "Skill Analysis",
+        "Learning Path",
+        "Resume Review",
+        "Interview Prep"
+    ]
+)
+
 st.title("🚀 CareerPilot AI")
 st.subheader("Multi-Agent Career & Skill Development Assistant")
 
