@@ -3,30 +3,79 @@ import streamlit as st
 st.set_page_config(page_title="CareerPilot AI", page_icon="🚀")
 
 st.title("🚀 CareerPilot AI")
+st.subheader("Multi-Agent Career & Skill Development Assistant")
 
-st.write(
-    "An AI-powered multi-agent career development assistant that helps students identify skill gaps, "
-    "receive personalized learning paths, improve resumes, build portfolios, and prepare for interviews."
+name = st.text_input("Enter Your Name")
+
+career = st.selectbox(
+    "Select Career Goal",
+    [
+        "Data Analyst",
+        "AI Engineer",
+        "Software Developer",
+        "Data Scientist"
+    ]
 )
 
-st.header("Key Features")
+skills = st.text_area(
+    "Enter Your Skills (comma separated)",
+    placeholder="Python, SQL, Excel"
+)
 
-st.markdown("""
-- 📊 Skill Gap Analysis
-- 📚 Learning Path Recommendation
-- 📁 Portfolio Builder
-- 📄 Resume Review
-- 🎤 Interview Preparation
-""")
+if st.button("Analyze Skills"):
 
-st.header("Technology Stack")
+    st.header("📊 Skill Analysis Agent")
 
-st.markdown("""
-- Python
-- Streamlit
-- Microsoft Foundry
-- AI Agents
-- Machine Learning
-""")
+    missing = []
 
-st.success("CareerPilot AI is ready for future development!")
+    required = {
+        "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
+        "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
+        "Software Developer": ["Python", "Git", "Data Structures"],
+        "Data Scientist": ["Python", "Machine Learning", "Statistics"]
+    }
+
+    for skill in required[career]:
+        if skill.lower() not in skills.lower():
+            missing.append(skill)
+
+    st.write("Missing Skills:")
+    st.write(missing)
+
+    st.header("📚 Learning Path Agent")
+
+    for item in missing:
+        st.write(f"Learn {item}")
+
+    st.header("🗂 Portfolio Builder Agent")
+
+    if career == "Data Analyst":
+        st.write("- Sales Dashboard")
+        st.write("- HR Analytics Dashboard")
+        st.write("- Customer Churn Analysis")
+
+    elif career == "AI Engineer":
+        st.write("- Resume Analyzer")
+        st.write("- Chatbot")
+        st.write("- AI Career Coach")
+
+    elif career == "Software Developer":
+        st.write("- Task Manager App")
+        st.write("- Portfolio Website")
+        st.write("- E-Commerce Website")
+
+    st.header("📄 Resume Review Agent")
+
+    st.success("Resume Score: 85/100")
+
+    st.write("Suggestions:")
+    st.write("- Add measurable achievements")
+    st.write("- Improve project descriptions")
+
+    st.header("🎤 Interview Preparation Agent")
+
+    st.write("Interview Questions:")
+
+    st.write("1. Explain one project you built.")
+    st.write("2. What challenges did you face?")
+    st.write("3. How would you improve your solution?")
