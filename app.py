@@ -195,6 +195,11 @@ required = {
 
 missing = []
 
+if career in required:
+    for skill in required[career]:
+        if skill.lower() not in skills.lower():
+            missing.append(skill)
+
 for skill in required[career]:
         if skill.lower() not in skills.lower():
             missing.append(skill)
