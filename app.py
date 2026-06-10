@@ -259,26 +259,26 @@ if page == "Dashboard":
         st.write("1. Explain one project you built.")
         st.write("2. What challenges did you face?")
         st.write("3. How would you improve your solution?")
-       st.header("🚀 Success Tips")
+        st.header("🚀 Success Tips")
 
-       tips = [
-           "Build projects regularly",
-           "Practice interview questions",
-           "Learn from real-world datasets",
-           "Contribute on GitHub",
-           "Keep updating your portfolio"
-       ]
+        tips = [
+            "Build projects regularly",
+            "Practice interview questions",
+            "Learn from real-world datasets",
+            "Contribute on GitHub",
+            "Keep updating your portfolio"
+        ]
 
-       for tip in tips:
-       st.write("✅", tip)
-       st.markdown("---")
+        for tip in tips:
+        st.write("✅", tip)
+        st.markdown("---")
 
-       st.markdown(
-           """
-           <center>
-               <h3>CareerPilot AI 🚀</h3>
-               <p>AI-Powered Career Guidance Platform</p>
-           </center>
-           """,
-           unsafe_allow_html=True
-       )    
+        st.markdown(
+            """
+            <center>
+                <h3>CareerPilot AI 🚀</h3>
+                <p>AI-Powered Career Guidance Platform</p>
+            </center>
+            """,
+            unsafe_allow_html=True
+        )    
