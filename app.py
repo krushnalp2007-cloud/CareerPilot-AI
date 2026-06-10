@@ -83,7 +83,7 @@ if page == "Skill Analysis":
 
     if st.button("Analyze Skills"):
 
-    required = {
+        required = {
         "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
         "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
         "Software Developer": ["Python", "Git", "Data Structures"],
