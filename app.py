@@ -260,20 +260,20 @@ elif career == "Data Scientist":
     st.write("4️⃣ Build Data Science Projects")
     st.write("5️⃣ Apply for Data Scientist Jobs")
             
-            st.header("📚 Learning Path Agent")
-        
-        for item in missing:
-            st.write(f"Learn {item}")
-        resources = {
-            "Power BI":"https://learn.microsoft.com/power-bi/",
-            "Statistics":"https://www.khanacademy.org/math/statistics-probability",
-            "Machine Learning":"https://www.coursera.org/learn/machine-learning"
-        }  
+st.header("📚 Learning Path Agent")
+    
+    for item in missing:
+        st.write(f"Learn {item}")
+    resources = {
+        "Power BI":"https://learn.microsoft.com/power-bi/",
+        "Statistics":"https://www.khanacademy.org/math/statistics-probability",
+        "Machine Learning":"https://www.coursera.org/learn/machine-learning"
+    }  
 
-        for skill in missing:
-            if skill in resources:
-                st.markdown(f"📚 [{skill} Course]({resources[skill]})")
-        st.header("🏆 Recommended Certifications")
+    for skill in missing:
+        if skill in resources:
+            st.markdown(f"📚 [{skill} Course]({resources[skill]})")
+    st.header("🏆 Recommended Certifications")
 
         if career == "Data Analyst":
             st.write("📜 Google Data Analytics Certificate")
