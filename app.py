@@ -12,6 +12,10 @@ st.markdown("""
     background-color:#0E1B3D;
 }
 
+section[data-testid="stSidebar"] {
+    background-color: #162447;
+}    
+
 .card{
     background:#162447;
     padding:20px;
@@ -42,6 +46,10 @@ h1,h2,h3,h4,h5,h6 {
 """, unsafe_allow_html=True)
 
 st.sidebar.title("🚀 CareerPilot AI")
+st.sidebar.image(
+    "https://via.placeholder.com/120",
+    width=120
+)    
 
 st.sidebar.markdown("### 👤 Krushnal Patil")
 st.sidebar.markdown("Data Analyst Aspirant")
@@ -60,13 +68,28 @@ if page == "Dashboard":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("Career Level", "Mid Level")
+     st.markdown("""
+     <div class='card'>
+     <h3>Career Level</h3>
+     <h2>Mid Level</h2>
+     </div>
+     """, unsafe_allow_html=True)
 
     with col2:
-        st.metric("Resume Score", "85%")
+     st.markdown("""
+     <div class='card'>
+     <h3>Resume Score</h3>
+     <h2>85%</h2>
+     </div>
+     """, unsafe_allow_html=True)
 
     with col3:
-        st.metric("Skill Match", "78%")
+     st.markdown("""
+     <div class='card'>
+     <h3>Skill Match</h3>
+     <h2>78%</h2>
+     </div>
+     """, unsafe_allow_html=True)
 
     st.markdown("---")
 
@@ -102,19 +125,27 @@ if page == "Dashboard":
         """)
         st.subheader("Multi-Agent Career & Skill Development Assistant")
     
+    if "analyzed" not in st.session_state:
+        st.session_state.analyzed = False
+    
+    if not st.session_state.analyzed:
 
-    name = st.text_input("Enter Your Name")
+        name = st.text_input("Enter Your Name")
 
-    career = st.selectbox(
-        "Select Career Goal",
-        ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
-    )
+        career = st.selectbox(
+            "Select Career Goal",
+            ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
+        )
 
-    skills = st.text_area("Enter Your Skills")
-    resume = st.file_uploader(
-        "Upload Resume",
-        type=["pdf", "docx"]
-    )  
+        skills = st.text_area("Enter Your Skills")
+
+        resume = st.file_uploader(
+            "Upload Resume",
+            type=["pdf","docx"]
+        )
+
+    if st.button("Analyze Skills"):
+        st.session_state.analyzed = True
 
     if resume:
         st.success("Resume Uploaded Successfully")
@@ -188,8 +219,9 @@ if page == "Dashboard":
             report_text,
             file_name="career_report.txt"
         )
+        left,right = st.columns(2)
         st.header("🛣 Career Roadmap")
-
+        
         if career == "Data Analyst":
             st.write("1️⃣ Learn Excel")
             st.write("2️⃣ Learn SQL")
