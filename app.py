@@ -97,8 +97,10 @@ if page == "Dashboard":
             if skill.lower() not in skills.lower():
                missing.append(skill)
 
-        st.write("Missing Skills:")
-        st.write(missing)
+        st.subheader("Missing Skills")
+
+        for skill in missing:
+            st.success(f"✓ {skill}")
 
         st.header("📚 Learning Path Agent")
         
