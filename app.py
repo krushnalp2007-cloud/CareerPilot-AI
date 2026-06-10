@@ -292,15 +292,10 @@ if page == "Dashboard":
 
         st.markdown("---")
 
-        st.markdown("""
-        <center>
-        ...  
-        st.markdown("---")
-
         st.markdown(
             """
             <center>
-                <h3>CareerPilot AI 🚀</h3>
+                <h3>CareerPilot AI</h3>
                 <p>AI-Powered Career Guidance Platform</p>
             </center>
             """,
