@@ -176,15 +176,15 @@ if page == "Dashboard":
     st.markdown("---")    
 
     skills_df = pd.DataFrame({
-            "Skill": ["Python", "SQL", "Power BI", "Statistics"],
-            "Score": [85, 75, 65, 60]
-        })
+        "Skill": ["Python", "SQL", "Power BI", "Statistics"],
+        "Score": [85, 75, 65, 60]
+    })
 
-        st.subheader("📊 Skill Analytics")
+    st.subheader("📊 Skill Analytics")
 
-        st.bar_chart(
-            skills_df.set_index("Skill")
-        )
+    st.bar_chart(
+        skills_df.set_index("Skill")
+    )
         
         required = {
             "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
