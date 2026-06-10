@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+import plotly.express as px
 
 st.set_page_config(
     page_title="CareerPilot AI",
@@ -172,7 +174,6 @@ if page == "Dashboard":
         st.metric("Career Level", "Mid")
     
     st.markdown("---")    
-        import pandas as pd
 
         skills_df = pd.DataFrame({
             "Skill": ["Python", "SQL", "Power BI", "Statistics"],
