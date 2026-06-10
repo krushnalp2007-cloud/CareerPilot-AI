@@ -101,39 +101,39 @@ if page == "Dashboard":
         st.write(missing)
 
         st.header("📚 Learning Path Agent")
-
+        
         for item in missing:
             st.write(f"Learn {item}")
 
-    st.header("📁 Portfolio Builder Agent")
+        st.header("📁 Portfolio Builder Agent")
 
-    if career == "Data Analyst":
+        if career == "Data Analyst":
         st.write("• Sales Dashboard")
         st.write("• HR Analytics Dashboard")
         st.write("• Customer Churn Analysis")
 
-    elif career == "AI Engineer":
+        elif career == "AI Engineer":
         st.write("• Resume Analyzer")
         st.write("• Chatbot")
         st.write("• AI Career Coach")
 
-    elif career == "Software Developer":
+        elif career == "Software Developer":
         st.write("• Task Manager App")
         st.write("• Portfolio Website")
         st.write("• E-Commerce Website")
 
-    st.header("📄 Resume Review Agent")
+        st.header("📄 Resume Review Agent")
 
-    st.success("Resume Score: 85/100")
+        st.success("Resume Score: 85/100")
 
-    st.write("Suggestions:")
-    st.write("• Add measurable achievements")
-    st.write("• Improve project descriptions")
+        st.write("Suggestions:")
+        st.write("• Add measurable achievements")
+        st.write("• Improve project descriptions")
 
-    st.header("🎤 Interview Preparation Agent")
+        st.header("🎤 Interview Preparation Agent")
 
-    st.write("Interview Questions:")
+        st.write("Interview Questions:")
 
-    st.write("1. Explain one project you built.")
-    st.write("2. What challenges did you face?")
-    st.write("3. How would you improve your solution?")
+        st.write("1. Explain one project you built.")
+        st.write("2. What challenges did you face?")
+        st.write("3. How would you improve your solution?")
