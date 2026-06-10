@@ -112,8 +112,45 @@ if page == "Dashboard":
 
         st.info(f"Career Goal: {career}")
         st.info(f"Missing Skills: {', '.join(missing)}")
-        st.info(f"Total Missing Skills: {len(missing)}")    
-        st.header("📚 Learning Path Agent")
+        st.info(f"Total Missing Skills: {len(missing)}")
+        match_percent = int(
+            ((len(required[career])-len(missing))
+            / len(required[career])) * 100
+        )   
+
+        st.progress(match_percent)
+        st.success(f"Skill Match: {match_percent}%)
+        st.header("🛣 Career Roadmap")
+
+        if career == "Data Analyst":
+            st.write("1️⃣ Learn Excel")
+            st.write("2️⃣ Learn SQL")
+            st.write("3️⃣ Learn Power BI")
+            st.write("4️⃣ Build Dashboard Projects")
+            st.write("5️⃣ Apply for Data Analyst Jobs")
+
+        elif career == "AI Engineer":
+            st.write("1️⃣ Learn Python")
+            st.write("2️⃣ Learn Machine Learning")
+            st.write("3️⃣ Learn Deep Learning")
+            st.write("4️⃣ Build AI Projects")
+            st.write("5️⃣ Apply for AI Engineer Jobs")
+
+        elif career == "Software Developer":
+            st.write("1️⃣ Learn Python")
+            st.write("2️⃣ Learn Data Structures")
+            st.write("3️⃣ Learn Git & GitHub")
+            st.write("4️⃣ Build Full Stack Projects")
+            st.write("5️⃣ Apply for Developer Jobs")
+
+        elif career == "Data Scientist":
+            st.write("1️⃣ Learn Python")
+            st.write("2️⃣ Learn Statistics")
+            st.write("3️⃣ Learn Machine Learning")
+            st.write("4️⃣ Build Data Science Projects")
+            st.write("5️⃣ Apply for Data Scientist Jobs")
+            
+            st.header("📚 Learning Path Agent")
         
         for item in missing:
             st.write(f"Learn {item}")
@@ -126,7 +163,38 @@ if page == "Dashboard":
         for skill in missing:
             if skill in resources:
                 st.markdown(f"📚 [{skill} Course]({resources[skill]})")
+        st.header("🏆 Recommended Certifications")
 
+        if career == "Data Analyst":
+            st.write("📜 Google Data Analytics Certificate")
+            st.write("📜 Microsoft Power BI Certificate")
+
+        elif career == "AI Engineer":
+            st.write("📜 Machine Learning Specialization")
+            st.write("📜 Deep Learning Specialization")
+
+        elif career == "Software Developer":
+            st.write("📜 Meta Backend Developer")
+            st.write("📜 Python Programming Certificate")
+
+        elif career == "Data Scientist":
+            st.write("📜 IBM Data Science Professional Certificate")
+            st.write("📜 Machine Learning Specialization")
+
+        st.header("🤖 AI Career Tips")
+
+        if career == "Data Analyst":
+           st.info("Focus on Excel, SQL, Power BI, and Dashboard Projects.")
+
+        elif career == "AI Engineer":
+           st.info("Build Machine Learning and Deep Learning projects using Python.")
+
+        elif career == "Software Developer":
+           st.info("Master DSA, GitHub, Full Stack Development, and System Design.")
+
+        elif career == "Data Scientist":
+           st.info("Learn Statistics, Machine Learning, and Data Visualization.")
+        
         st.header("📁 Portfolio Builder Agent")
 
         if career == "Data Analyst":
@@ -144,6 +212,21 @@ if page == "Dashboard":
             st.write("• Portfolio Website")
             st.write("• E-Commerce Website")
 
+            st.header("🎯 Recommended Jobs")
+
+        if career == "Data Analyst":
+           st.write("• Junior Data Analyst")
+           st.write("• Business Analyst")
+           st.write("• Reporting Analyst")
+
+        elif career == "AI Engineer":
+           st.write("• AI Engineer")
+           st.write("• Machine Learning Engineer")
+
+        elif career == "Software Developer":
+           st.write("• Python Developer")
+           st.write("• Full Stack Developer")
+        
         st.header("📄 Resume Review Agent")
 
         st.success("Resume Score: 85/100")
