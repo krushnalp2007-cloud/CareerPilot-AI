@@ -164,7 +164,19 @@ if page == "Dashboard":
 
         with col4:
              st.metric("Career Level", "Mid")
-       
+        import pandas as pd
+
+        skills_df = pd.DataFrame({
+            "Skill": ["Python", "SQL", "Power BI", "Statistics"],
+            "Score": [85, 75, 65, 60]
+        })
+
+        st.subheader("📊 Skill Analytics")
+
+        st.bar_chart(
+            skills_df.set_index("Skill")
+        )
+        
         required = {
             "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
             "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
