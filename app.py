@@ -229,36 +229,36 @@ st.download_button(
      file_name="career_report.txt"
 )
 
-left, right = st.columns(2)
+left,right = st.columns(2)
 st.header("🛣 Career Roadmap")
     
-    if career == "Data Analyst":
-        st.write("1️⃣ Learn Excel")
-        st.write("2️⃣ Learn SQL")
-        st.write("3️⃣ Learn Power BI")
-        st.write("4️⃣ Build Dashboard Projects")
-        st.write("5️⃣ Apply for Data Analyst Jobs")
+if career == "Data Analyst":
+  st.write("1️⃣ Learn Excel")
+  st.write("2️⃣ Learn SQL")
+  st.write("3️⃣ Learn Power BI")
+  st.write("4️⃣ Build Dashboard Projects")
+  st.write("5️⃣ Apply for Data Analyst Jobs")
 
-    elif career == "AI Engineer":
-        st.write("1️⃣ Learn Python")
-        st.write("2️⃣ Learn Machine Learning")
-        st.write("3️⃣ Learn Deep Learning")
-        st.write("4️⃣ Build AI Projects")
-        st.write("5️⃣ Apply for AI Engineer Jobs")
+elif career == "AI Engineer":
+    st.write("1️⃣ Learn Python")
+    st.write("2️⃣ Learn Machine Learning")
+    st.write("3️⃣ Learn Deep Learning")
+    st.write("4️⃣ Build AI Projects")
+    st.write("5️⃣ Apply for AI Engineer Jobs")
 
-    elif career == "Software Developer":
-        st.write("1️⃣ Learn Python")
-        st.write("2️⃣ Learn Data Structures")
-        st.write("3️⃣ Learn Git & GitHub")
-        st.write("4️⃣ Build Full Stack Projects")
-            st.write("5️⃣ Apply for Developer Jobs")
+elif career == "Software Developer":
+    st.write("1️⃣ Learn Python")
+    st.write("2️⃣ Learn Data Structures")
+    st.write("3️⃣ Learn Git & GitHub")
+    st.write("4️⃣ Build Full Stack Projects")
+    st.write("5️⃣ Apply for Developer Jobs")
 
-        elif career == "Data Scientist":
-            st.write("1️⃣ Learn Python")
-            st.write("2️⃣ Learn Statistics")
-            st.write("3️⃣ Learn Machine Learning")
-            st.write("4️⃣ Build Data Science Projects")
-            st.write("5️⃣ Apply for Data Scientist Jobs")
+elif career == "Data Scientist":
+    st.write("1️⃣ Learn Python")
+    st.write("2️⃣ Learn Statistics")
+    st.write("3️⃣ Learn Machine Learning")
+    st.write("4️⃣ Build Data Science Projects")
+    st.write("5️⃣ Apply for Data Scientist Jobs")
             
             st.header("📚 Learning Path Agent")
         
