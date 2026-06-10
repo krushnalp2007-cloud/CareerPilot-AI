@@ -85,10 +85,10 @@ if page == "Dashboard":
     if st.button("Analyze Skills"):
        
         required = {
-        "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
-        "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
-        "Software Developer": ["Python", "Git", "Data Structures"],
-        "Data Scientist": ["Python", "Machine Learning", "Statistics"]
+            "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
+            "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
+            "Software Developer": ["Python", "Git", "Data Structures"],
+            "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
 
     missing = []
