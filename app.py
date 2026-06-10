@@ -291,114 +291,114 @@ elif career == "Data Scientist":
     st.write("📜 IBM Data Science Professional Certificate")
     st.write("📜 Machine Learning Specialization")
 
-        st.header("🌐 Learning Platforms")
+st.header("🌐 Learning Platforms")
 
-        st.write("📚 Coursera")
-        st.write("📚 Udemy")
-        st.write("📚 Microsoft Learn")
-        st.write("📚 Kaggle Learn")
+st.write("📚 Coursera")
+st.write("📚 Udemy")
+st.write("📚 Microsoft Learn")
+st.write("📚 Kaggle Learn")
         
-        st.header("🤖 AI Career Tips")
+st.header("🤖 AI Career Tips")
 
-        if career == "Data Analyst":
-           st.info("Focus on Excel, SQL, Power BI, and Dashboard Projects.")
+if career == "Data Analyst":
+   st.info("Focus on Excel, SQL, Power BI, and Dashboard Projects.")
 
-        elif career == "AI Engineer":
-           st.info("Build Machine Learning and Deep Learning projects using Python.")
+elif career == "AI Engineer":
+   st.info("Build Machine Learning and Deep Learning projects using Python.")
 
-        elif career == "Software Developer":
-           st.info("Master DSA, GitHub, Full Stack Development, and System Design.")
+elif career == "Software Developer":
+   st.info("Master DSA, GitHub, Full Stack Development, and System Design.")
 
-        elif career == "Data Scientist":
-           st.info("Learn Statistics, Machine Learning, and Data Visualization.")
-        
-        st.header("📁 Portfolio Builder Agent")
+elif career == "Data Scientist":
+   st.info("Learn Statistics, Machine Learning, and Data Visualization.")
 
-        if career == "Data Analyst":
-            st.write("• Sales Dashboard")
-            st.write("• HR Analytics Dashboard")
-            st.write("• Customer Churn Analysis")
+st.header("📁 Portfolio Builder Agent")
 
-        elif career == "AI Engineer":
-            st.write("• Resume Analyzer")
-            st.write("• Chatbot")
-            st.write("• AI Career Coach")
+if career == "Data Analyst":
+    st.write("• Sales Dashboard")
+    st.write("• HR Analytics Dashboard")
+    st.write("• Customer Churn Analysis")
 
-        elif career == "Software Developer":
-            st.write("• Task Manager App")
-            st.write("• Portfolio Website")
-            st.write("• E-Commerce Website")
+elif career == "AI Engineer":
+    st.write("• Resume Analyzer")
+    st.write("• Chatbot")
+    st.write("• AI Career Coach")
 
-            st.header("🎯 Recommended Jobs")
+elif career == "Software Developer":
+    st.write("• Task Manager App")
+    st.write("• Portfolio Website")
+    st.write("• E-Commerce Website")
 
-        if career == "Data Analyst":
-            st.write("• Junior Data Analyst")
-            st.write("• Business Analyst")
-            st.write("• Reporting Analyst")
+    st.header("🎯 Recommended Jobs")
 
-        elif career == "AI Engineer":
-            st.write("• AI Engineer")
-            st.write("• Machine Learning Engineer")
+if career == "Data Analyst":
+    st.write("• Junior Data Analyst")
+    st.write("• Business Analyst")
+    st.write("• Reporting Analyst")
 
-        elif career == "Software Developer":
-            st.write("• Python Developer")
-            st.write("• Full Stack Developer")
-        
-        elif career == "Data Scientist":
-            st.write("• Data Scientist")
-            st.write("• Machine Learning Engineer")
-        st.header("💰 Salary Insights")
+elif career == "AI Engineer":
+    st.write("• AI Engineer")
+    st.write("• Machine Learning Engineer")
 
-        if career == "Data Analyst":
-            st.info("Average Salary: ₹4-10 LPA")
+elif career == "Software Developer":
+    st.write("• Python Developer")
+    st.write("• Full Stack Developer")
 
-        elif career == "AI Engineer":
-            st.info("Average Salary: ₹8-20 LPA")
+elif career == "Data Scientist":
+    st.write("• Data Scientist")
+    st.write("• Machine Learning Engineer")
+st.header("💰 Salary Insights")
 
-        elif career == "Software Developer":
-            st.info("Average Salary: ₹5-18 LPA")
+if career == "Data Analyst":
+    st.info("Average Salary: ₹4-10 LPA")
 
-        elif career == "Data Scientist":
-            st.info("Average Salary: ₹7-20 LPA")    
+elif career == "AI Engineer":
+    st.info("Average Salary: ₹8-20 LPA")
 
-        st.header("📄 Resume Review Agent")
+elif career == "Software Developer":
+    st.info("Average Salary: ₹5-18 LPA")
 
-        st.success("Resume Score: 85/100")
+elif career == "Data Scientist":
+    st.info("Average Salary: ₹7-20 LPA")    
 
-        st.write("Suggestions:")
-        st.write("• Add measurable achievements")
-        st.write("• Improve project descriptions")
+st.header("📄 Resume Review Agent")
 
-        st.header("🎤 Interview Preparation Agent")
+st.success("Resume Score: 85/100")
 
-        st.write("Interview Questions:")
+st.write("Suggestions:")
+st.write("• Add measurable achievements")
+st.write("• Improve project descriptions")
 
-        st.write("1. Explain one project you built.")
-        st.write("2. What challenges did you face?")
-        st.write("3. How would you improve your solution?")
-        st.header("🚀 Success Tips")
+st.header("🎤 Interview Preparation Agent")
 
-        tips = [
-            "Build projects regularly",
-            "Practice interview questions",
-            "Learn from real-world datasets",
-            "Contribute on GitHub",
-            "Keep updating your portfolio"
-        ]
+st.write("Interview Questions:")
 
-        for tip in tips:
-            st.write("✅", tip)
-   
-        st.success("🎉 Career Analysis Completed Successfully!")
+st.write("1. Explain one project you built.")
+st.write("2. What challenges did you face?")
+st.write("3. How would you improve your solution?")
+st.header("🚀 Success Tips")
 
-        st.markdown("---")
+tips = [
+    "Build projects regularly",
+    "Practice interview questions",
+    "Learn from real-world datasets",
+    "Contribute on GitHub",
+    "Keep updating your portfolio"
+]
 
-        st.markdown(
-            """
-            <center>
-                <h3>CareerPilot AI</h3>
-                <p>AI-Powered Career Guidance Platform</p>
-            </center>
-            """,
-            unsafe_allow_html=True
-        )    
+for tip in tips:
+    st.write("✅", tip)
+
+st.success("🎉 Career Analysis Completed Successfully!")
+
+st.markdown("---")
+
+st.markdown(
+    """
+    <center>
+        <h3>CareerPilot AI</h3>
+        <p>AI-Powered Career Guidance Platform</p>
+    </center>
+    """,
+    unsafe_allow_html=True
+)    
