@@ -134,10 +134,12 @@ if page == "Dashboard":
 
         name = st.text_input("Enter Your Name")
 
-        career = st.selectbox(
-            "Select Career Goal",
-            ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
-        )
+    st.session_state.career = st.selectbox(
+         "Select Career Goal",
+        ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
+    )
+
+    career = st.session_state.career
 
         skills = st.text_area("Enter Your Skills")
 
