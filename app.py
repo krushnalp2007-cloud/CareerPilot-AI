@@ -158,17 +158,17 @@ if page == "Dashboard":
 
     col1,col2,col3,col4 = st.columns(4)
 
-        with col1:
-            st.metric("Resume Score", "85%", "+5%")
+    with col1:
+        st.metric("Resume Score", "85%", "+5%")
 
-        with col2:
-            st.metric("Skill Match", "78%", "+8%")
+    with col2:
+        st.metric("Skill Match", "78%", "+8%")
 
-        with col3:
-            st.metric("Missing Skills", "2")
+    with col3:
+        st.metric("Missing Skills", "2")
 
-        with col4:
-             st.metric("Career Level", "Mid")
+    with col4:
+        st.metric("Career Level", "Mid")
         import pandas as pd
 
         skills_df = pd.DataFrame({
