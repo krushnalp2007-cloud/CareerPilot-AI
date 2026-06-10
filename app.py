@@ -173,81 +173,81 @@ if page == "Dashboard":
     with col4:
         st.metric("Career Level", "Mid")
     
-    st.markdown("---")    
+st.markdown("---")    
 
-    skills_df = pd.DataFrame({
-        "Skill": ["Python", "SQL", "Power BI", "Statistics"],
-        "Score": [85, 75, 65, 60]
-    })
+skills_df = pd.DataFrame({
+    "Skill": ["Python", "SQL", "Power BI", "Statistics"],
+    "Score": [85, 75, 65, 60]
+})
 
-    st.subheader("📊 Skill Analytics")
+st.subheader("📊 Skill Analytics")
 
-    st.bar_chart(
-        skills_df.set_index("Skill")
+st.bar_chart(
+    skills_df.set_index("Skill")
+)
+    
+    required = {
+        "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
+        "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
+        "Software Developer": ["Python", "Git", "Data Structures"],
+        "Data Scientist": ["Python", "Machine Learning", "Statistics"]
+    }
+
+    missing = []
+
+    for skill in required[career]:
+        if skill.lower() not in skills.lower():
+            missing.append(skill)
+
+    st.subheader("Missing Skills")
+
+    for skill in missing:
+        st.write(f"• {skill}")
+    st.header("📊 Career Report")
+
+    st.info(f"Career Goal: {career}")
+    st.info(f"Missing Skills: {', '.join(missing)}")
+    st.info(f"Total Missing Skills: {len(missing)}")
+    match_percent = int(
+        ((len(required[career])-len(missing))
+        / len(required[career])) * 100
+    )   
+
+    st.progress(match_percent)
+    st.success(f"Skill Match: {match_percent}%")
+    report_text = f"""
+    Career Goal: {career}
+    Missing Skills: {", ".join(missing)}
+    Skill Match: {match_percent}%
+    """
+
+    st.download_button(
+        "📥 Download Career Report",
+        report_text,
+        file_name="career_report.txt"
     )
-        
-        required = {
-            "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
-            "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
-            "Software Developer": ["Python", "Git", "Data Structures"],
-            "Data Scientist": ["Python", "Machine Learning", "Statistics"]
-        }
+    left,right = st.columns(2)
+    st.header("🛣 Career Roadmap")
+    
+    if career == "Data Analyst":
+        st.write("1️⃣ Learn Excel")
+        st.write("2️⃣ Learn SQL")
+        st.write("3️⃣ Learn Power BI")
+        st.write("4️⃣ Build Dashboard Projects")
+        st.write("5️⃣ Apply for Data Analyst Jobs")
 
-        missing = []
+    elif career == "AI Engineer":
+        st.write("1️⃣ Learn Python")
+        st.write("2️⃣ Learn Machine Learning")
+        st.write("3️⃣ Learn Deep Learning")
+        st.write("4️⃣ Build AI Projects")
+        st.write("5️⃣ Apply for AI Engineer Jobs")
 
-        for skill in required[career]:
-            if skill.lower() not in skills.lower():
-                missing.append(skill)
-
-        st.subheader("Missing Skills")
-
-        for skill in missing:
-            st.write(f"• {skill}")
-        st.header("📊 Career Report")
-
-        st.info(f"Career Goal: {career}")
-        st.info(f"Missing Skills: {', '.join(missing)}")
-        st.info(f"Total Missing Skills: {len(missing)}")
-        match_percent = int(
-            ((len(required[career])-len(missing))
-            / len(required[career])) * 100
-        )   
-
-        st.progress(match_percent)
-        st.success(f"Skill Match: {match_percent}%")
-        report_text = f"""
-        Career Goal: {career}
-        Missing Skills: {", ".join(missing)}
-        Skill Match: {match_percent}%
-        """
-
-        st.download_button(
-            "📥 Download Career Report",
-            report_text,
-            file_name="career_report.txt"
-        )
-        left,right = st.columns(2)
-        st.header("🛣 Career Roadmap")
-        
-        if career == "Data Analyst":
-            st.write("1️⃣ Learn Excel")
-            st.write("2️⃣ Learn SQL")
-            st.write("3️⃣ Learn Power BI")
-            st.write("4️⃣ Build Dashboard Projects")
-            st.write("5️⃣ Apply for Data Analyst Jobs")
-
-        elif career == "AI Engineer":
-            st.write("1️⃣ Learn Python")
-            st.write("2️⃣ Learn Machine Learning")
-            st.write("3️⃣ Learn Deep Learning")
-            st.write("4️⃣ Build AI Projects")
-            st.write("5️⃣ Apply for AI Engineer Jobs")
-
-        elif career == "Software Developer":
-            st.write("1️⃣ Learn Python")
-            st.write("2️⃣ Learn Data Structures")
-            st.write("3️⃣ Learn Git & GitHub")
-            st.write("4️⃣ Build Full Stack Projects")
+    elif career == "Software Developer":
+        st.write("1️⃣ Learn Python")
+        st.write("2️⃣ Learn Data Structures")
+        st.write("3️⃣ Learn Git & GitHub")
+        st.write("4️⃣ Build Full Stack Projects")
             st.write("5️⃣ Apply for Developer Jobs")
 
         elif career == "Data Scientist":
