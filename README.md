@@ -49,6 +49,27 @@ Interview Preparation Agent
 ↓
 Career Guidance Output
 
+
+
 ## Impact
 
 CareerPilot AI helps students become industry-ready through personalized guidance, skill-gap analysis, portfolio development, resume enhancement, and interview preparation.
+
+## Future Enhancements
+
+- Internship Recommendation Agent
+- Job Matching Agent
+- Real-time Career Mentor
+- Certification Tracking
+- LinkedIn Profile Analyzer
+- AI Mock Interview System
+
+ ## Demo
+
+CareerPilot AI demonstrates multi-agent collaboration for:
+
+- Skill Gap Analysis
+- Learning Path Generation
+- Portfolio Recommendations
+- Resume Improvement
+- Interview Preparation
