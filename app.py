@@ -228,8 +228,9 @@ st.download_button(
      report_text,
      file_name="career_report.txt"
 )
-    left,right = st.columns(2)
-    st.header("🛣 Career Roadmap")
+
+left, right = st.columns(2)
+st.header("🛣 Career Roadmap")
     
     if career == "Data Analyst":
         st.write("1️⃣ Learn Excel")
