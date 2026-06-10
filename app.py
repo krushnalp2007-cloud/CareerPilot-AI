@@ -149,6 +149,12 @@ if page == "Dashboard":
 
     if resume:
         st.success("Resume Uploaded Successfull")
+    st.title("🚀 CareerPilot AI Dashboard")
+
+    st.markdown(f"""
+    ### Welcome, {name}
+    Career Goal: *{career}*
+    """)
 
         col1,col2,col3,col4 = st.columns(4)
 
