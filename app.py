@@ -132,6 +132,8 @@ if page == "Dashboard":
     
     if not st.session_state.analyzed:
 
+    if not st.session_state.analyzed:
+
     name = st.text_input("Enter Your Name")
 
     st.session_state.career = st.selectbox(
@@ -145,6 +147,8 @@ if page == "Dashboard":
 
     resume = st.file_uploader(
         "Upload Resume",
+        type=["pdf", "docx"]
+    )
         type=["pdf", "docx"]
     )
 
