@@ -132,7 +132,7 @@ if page == "Dashboard":
     
     if not st.session_state.analyzed:
 
-        name = st.text_input("Enter Your Name")
+    name = st.text_input("Enter Your Name")
 
     st.session_state.career = st.selectbox(
          "Select Career Goal",
@@ -141,12 +141,12 @@ if page == "Dashboard":
 
     career = st.session_state.career
 
-        skills = st.text_area("Enter Your Skills")
+    skills = st.text_area("Enter Your Skills")
 
-        resume = st.file_uploader(
-            "Upload Resume",
-            type=["pdf","docx"]
-        )
+    resume = st.file_uploader(
+        "Upload Resume",
+        type=["pdf","docx"]
+    )
 
     if st.button("Analyze Skills"):
         st.session_state.analyzed = True
