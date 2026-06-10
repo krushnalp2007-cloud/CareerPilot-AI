@@ -1,6 +1,22 @@
 import streamlit as st
 
-st.set_page_config(page_title="CareerPilot AI", page_icon="🚀")
+st.set_page_config(
+    page_title="CareerPilot AI",
+    page_icon="🚀",
+    layout="wide"
+)
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0f172a;
+    color: white;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: white !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 st.title("🚀 CareerPilot AI")
 st.subheader("Multi-Agent Career & Skill Development Assistant")
