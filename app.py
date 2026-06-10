@@ -214,10 +214,10 @@ match_percent = int(
 )   
 
 st.progress(match_percent)
-    st.success(f"Skill Match: {match_percent}%")
-    report_text = f"""
-    Career Goal: {career}
-    Missing Skills: {", ".join(missing)}
+st.success(f"Skill Match: {match_percent}%")
+report_text = f"""
+Career Goal: {career}
+Missing Skills: {", ".join(missing)}
     Skill Match: {match_percent}%
     """
 
