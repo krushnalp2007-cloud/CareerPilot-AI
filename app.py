@@ -72,33 +72,16 @@ st.subheader("Multi-Agent Career & Skill Development Assistant")
 
 if page == "Skill Analysis":
 
-    st.header("📊 Skill Analysis")
-
     name = st.text_input("Enter Your Name")
-
+    
     career = st.selectbox(
         "Select Career Goal",
-        [
-            "Data Analyst",
-            "AI Engineer",
-            "Software Developer",
-            "Data Scientist"
-        ]
+        ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
     )
 
-    skills = st.text_area(
-        "Enter Your Skills (comma separated)",
-        placeholder="Python, SQL, Excel"
-    )
+    skills = st.text_area("Enter Your Skills")
 
     if st.button("Analyze Skills"):
-        st.success("Analysis Complete")
-
-if st.button("Analyze Skills"):
-
-    st.header("📊 Skill Analysis Agent")
-
-    missing = []
 
     required = {
         "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
@@ -106,6 +89,8 @@ if st.button("Analyze Skills"):
         "Software Developer": ["Python", "Git", "Data Structures"],
         "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
+
+    missing = []
 
     for skill in required[career]:
         if skill.lower() not in skills.lower():
@@ -119,30 +104,30 @@ if st.button("Analyze Skills"):
     for item in missing:
         st.write(f"Learn {item}")
 
-    st.header("🗂 Portfolio Builder Agent")
+    st.header("📁 Portfolio Builder Agent")
 
     if career == "Data Analyst":
-        st.write("- Sales Dashboard")
-        st.write("- HR Analytics Dashboard")
-        st.write("- Customer Churn Analysis")
+        st.write("• Sales Dashboard")
+        st.write("• HR Analytics Dashboard")
+        st.write("• Customer Churn Analysis")
 
     elif career == "AI Engineer":
-        st.write("- Resume Analyzer")
-        st.write("- Chatbot")
-        st.write("- AI Career Coach")
+        st.write("• Resume Analyzer")
+        st.write("• Chatbot")
+        st.write("• AI Career Coach")
 
     elif career == "Software Developer":
-        st.write("- Task Manager App")
-        st.write("- Portfolio Website")
-        st.write("- E-Commerce Website")
+        st.write("• Task Manager App")
+        st.write("• Portfolio Website")
+        st.write("• E-Commerce Website")
 
     st.header("📄 Resume Review Agent")
 
     st.success("Resume Score: 85/100")
 
     st.write("Suggestions:")
-    st.write("- Add measurable achievements")
-    st.write("- Improve project descriptions")
+    st.write("• Add measurable achievements")
+    st.write("• Improve project descriptions")
 
     st.header("🎤 Interview Preparation Agent")
 
