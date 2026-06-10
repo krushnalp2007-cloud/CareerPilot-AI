@@ -89,21 +89,21 @@ if page == "Dashboard":
             "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
             "Software Developer": ["Python", "Git", "Data Structures"],
             "Data Scientist": ["Python", "Machine Learning", "Statistics"]
-    }
+        }
 
-    missing = []
+        missing = []
 
-    for skill in required[career]:
-        if skill.lower() not in skills.lower():
-            missing.append(skill)
+        for skill in required[career]:
+            if skill.lower() not in skills.lower():
+               missing.append(skill)
 
-    st.write("Missing Skills:")
-    st.write(missing)
+        st.write("Missing Skills:")
+        st.write(missing)
 
-    st.header("📚 Learning Path Agent")
+        st.header("📚 Learning Path Agent")
 
-    for item in missing:
-        st.write(f"Learn {item}")
+        for item in missing:
+            st.write(f"Learn {item}")
 
     st.header("📁 Portfolio Builder Agent")
 
