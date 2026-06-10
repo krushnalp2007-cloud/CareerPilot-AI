@@ -151,31 +151,19 @@ if page == "Dashboard":
         st.success("Resume Uploaded Successfully")
 
 
-        col1,col2,col3 = st.columns(3)
+        col1,col2,col3,col4 = st.columns(4)
 
         with col1:
-            st.markdown("""
-            <div class='card'>
-            <h3>Career Level</h3>
-            <div class='metric'>Mid Level</div>
-            </div>
-            """, unsafe_allow_html=True)
+            st.metric("Resume Score", "85%", "+5%")
 
         with col2:
-             st.markdown("""
-             <div class='card'>
-             <h3>Resume Score</h3>
-             <div class='metric'>85%</div>
-             </div>
-             """, unsafe_allow_html=True)
+            st.metric("Skill Match", "78%", "+8%")
 
         with col3:
-             st.markdown("""
-             <div class='card'>
-             <h3>Skill Match</h3>
-             <div class='metric'>78%</div>
-             </div>
-             """, unsafe_allow_html=True)
+            st.metric("Missing Skills", "2")
+
+        with col4:
+             st.metric("Career Level", "Mid")
        
         required = {
             "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
