@@ -149,9 +149,7 @@ if page == "Dashboard":
         "Upload Resume",
         type=["pdf", "docx"]
     )
-        type=["pdf", "docx"]
-    )
-
+       
         career = st.session_state.career
 
     skills = st.text_area("Enter Your Skills")
