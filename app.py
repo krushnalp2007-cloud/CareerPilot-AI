@@ -270,7 +270,7 @@ if page == "Dashboard":
         ]
 
         for tip in tips:
-        st.write("✅", tip)
+            st.write("✅", tip)
         st.markdown("---")
 
         st.markdown(
