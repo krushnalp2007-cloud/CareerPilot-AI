@@ -117,6 +117,15 @@ if page == "Dashboard":
         
         for item in missing:
             st.write(f"Learn {item}")
+        resources = {
+            "Power BI":"https://learn.microsoft.com/power-bi/",
+            "Statistics":"https://www.khanacademy.org/math/statistics-probability",
+            "Machine Learning":"https://www.coursera.org/learn/machine-learning"
+        }  
+
+        for skill in missing:
+            if skill in resources:
+                st.markdown(f"📚 [{skill} Course]({resources[skill]})")
 
         st.header("📁 Portfolio Builder Agent")
 
