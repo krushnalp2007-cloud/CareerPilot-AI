@@ -7,6 +7,29 @@ st.set_page_config(
 )
 st.markdown("""
 <style>
+
+.main{
+    background-color:#0E1B3D;
+}
+
+.card{
+    background:#162447;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.metric{
+    font-size:30px;
+    font-weight:bold;
+    color:#4DA8FF;
+} 
+
+</style>
+""",unsafe_allow_html=True)
+    
+st.markdown("""
+<style>
 .stApp {
     background-color: #0f172a;
     color: white;
@@ -20,6 +43,8 @@ h1,h2,h3,h4,h5,h6 {
 
 st.sidebar.title("🚀 CareerPilot AI")
 
+st.sidebar.markdown("### 👤 Krushnal Patil")
+st.sidebar.markdown("Data Analyst Aspirant")
 page = st.sidebar.radio(
     "Navigation",
     [
@@ -95,6 +120,33 @@ if page == "Dashboard":
         st.success("Resume Uploaded Successfully")
 
     if st.button("Analyze Skills"):
+        st.title("🚀 CareerPilot AI Dashboard")
+
+        col1,col2,col3 = st.columns(3)
+
+        with col1:
+            st.markdown("""
+            <div class='card'>
+            <h3>Career Level</h3>
+            <div class='metric'>Mid Level</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+             st.markdown("""
+             <div class='card'>
+             <h3>Resume Score</h3>
+             <div class='metric'>85%</div>
+             </div>
+             """, unsafe_allow_html=True)
+
+        with col3:
+             st.markdown("""
+             <div class='card'>
+             <h3>Skill Match</h3>
+             <div class='metric'>78%</div>
+             </div>
+             """, unsafe_allow_html=True)
        
         required = {
             "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
