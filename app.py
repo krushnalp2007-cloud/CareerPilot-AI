@@ -186,34 +186,34 @@ st.bar_chart(
     skills_df.set_index("Skill")
 )
     
-    required = {
+required = {
         "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
         "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
         "Software Developer": ["Python", "Git", "Data Structures"],
         "Data Scientist": ["Python", "Machine Learning", "Statistics"]
     }
 
-    missing = []
+missing = []
 
-    for skill in required[career]:
+for skill in required[career]:
         if skill.lower() not in skills.lower():
             missing.append(skill)
 
-    st.subheader("Missing Skills")
+st.subheader("Missing Skills")
 
-    for skill in missing:
+for skill in missing:
         st.write(f"• {skill}")
-    st.header("📊 Career Report")
+st.header("📊 Career Report")
 
-    st.info(f"Career Goal: {career}")
-    st.info(f"Missing Skills: {', '.join(missing)}")
-    st.info(f"Total Missing Skills: {len(missing)}")
-    match_percent = int(
-        ((len(required[career])-len(missing))
-        / len(required[career])) * 100
-    )   
+st.info(f"Career Goal: {career}")
+st.info(f"Missing Skills: {', '.join(missing)}")
+st.info(f"Total Missing Skills: {len(missing)}")
+match_percent = int(
+    ((len(required[career])-len(missing))
+    / len(required[career])) * 100
+)   
 
-    st.progress(match_percent)
+st.progress(match_percent)
     st.success(f"Skill Match: {match_percent}%")
     report_text = f"""
     Career Goal: {career}
