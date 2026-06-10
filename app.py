@@ -30,6 +30,42 @@ page = st.sidebar.radio(
         "Interview Prep"
     ]
 )
+if page == "Dashboard":
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.metric("Career Level", "Mid Level")
+
+    with col2:
+        st.metric("Resume Score", "85%")
+
+    with col3:
+        st.metric("Skill Match", "78%")
+
+    st.markdown("---")
+
+    st.subheader("Career Roadmap")
+
+    st.progress(25)
+    st.write("Intern")
+
+    st.progress(50)
+    st.write("Junior")
+
+    st.progress(75)
+    st.write("Mid Level")
+
+    st.progress(100)
+    st.write("Senior")
+
+    st.markdown("---")
+
+    st.subheader("Skill Gap Analysis")
+
+    st.progress(80, text="Python")
+    st.progress(60, text="SQL")
+    st.progress(40, text="Machine Learning")
 
 st.title("🚀 CareerPilot AI")
 st.subheader("Multi-Agent Career & Skill Development Assistant")
