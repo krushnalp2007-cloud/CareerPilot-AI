@@ -119,7 +119,7 @@ if page == "Dashboard":
         )   
 
         st.progress(match_percent)
-        st.success(f"Skill Match: {match_percent}%)
+        st.success(f"Skill Match: {match_percent}%")
         st.header("🛣 Career Roadmap")
 
         if career == "Data Analyst":
