@@ -230,19 +230,19 @@ if page == "Dashboard":
         elif career == "Data Scientist":
             st.write("• Data Scientist")
             st.write("• Machine Learning Engineer")
-       st.header("💰 Salary Insights")
+        st.header("💰 Salary Insights")
 
-       if career == "Data Analyst":
-           st.info("Average Salary: ₹4-10 LPA")
+        if career == "Data Analyst":
+            st.info("Average Salary: ₹4-10 LPA")
 
-       elif career == "AI Engineer":
-           st.info("Average Salary: ₹8-20 LPA")
+        elif career == "AI Engineer":
+            st.info("Average Salary: ₹8-20 LPA")
 
-       elif career == "Software Developer":
-           st.info("Average Salary: ₹5-18 LPA")
+        elif career == "Software Developer":
+            st.info("Average Salary: ₹5-18 LPA")
 
-       elif career == "Data Scientist":
-           st.info("Average Salary: ₹7-20 LPA")    
+        elif career == "Data Scientist":
+            st.info("Average Salary: ₹7-20 LPA")    
 
         st.header("📄 Resume Review Agent")
 
