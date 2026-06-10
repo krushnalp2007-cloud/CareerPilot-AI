@@ -67,13 +67,14 @@ if page == "Dashboard":
     st.progress(60, text="SQL")
     st.progress(40, text="Machine Learning")
 
-st.title("🚀 CareerPilot AI")
-st.subheader("Multi-Agent Career & Skill Development Assistant")
+    if page == "Skill Analysis":
 
-if page == "Skill Analysis":
+        st.title("🚀 CareerPilot AI")
+        st.subheader("Multi-Agent Career & Skill Development Assistant")
+    
 
     name = st.text_input("Enter Your Name")
-    
+
     career = st.selectbox(
         "Select Career Goal",
         ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
@@ -82,7 +83,7 @@ if page == "Skill Analysis":
     skills = st.text_area("Enter Your Skills")
 
     if st.button("Analyze Skills"):
-
+       
         required = {
         "Data Analyst": ["Python", "SQL", "Power BI", "Statistics"],
         "AI Engineer": ["Python", "Machine Learning", "Deep Learning"],
