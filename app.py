@@ -135,11 +135,20 @@ if page == "Dashboard":
     name = st.text_input("Enter Your Name")
 
     st.session_state.career = st.selectbox(
-         "Select Career Goal",
-        ["Data Analyst","AI Engineer","Software Developer","Data Scientist"]
+        "Select Career Goal",
+        ["Data Analyst", "AI Engineer", "Software Developer", "Data Scientist"]
     )
 
     career = st.session_state.career
+
+    skills = st.text_area("Enter Your Skills")
+
+    resume = st.file_uploader(
+        "Upload Resume",
+        type=["pdf", "docx"]
+    )
+
+        career = st.session_state.career
 
     skills = st.text_area("Enter Your Skills")
 
