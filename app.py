@@ -108,7 +108,11 @@ if page == "Dashboard":
 
         for skill in missing:
             st.write(f"• {skill}")
-            
+        st.header("📊 Career Report")
+
+        st.info(f"Career Goal: {career}")
+        st.info(f"Missing Skills: {', '.join(missing)}")
+        st.info(f"Total Missing Skills: {len(missing)}")    
         st.header("📚 Learning Path Agent")
         
         for item in missing:
