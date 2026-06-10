@@ -81,6 +81,13 @@ if page == "Dashboard":
     )
 
     skills = st.text_area("Enter Your Skills")
+    resume = st.file_uploader(
+        "Upload Resume",
+        type=["pdf", "docx"]
+    )  
+
+    if resume:
+        st.success("Resume Uploaded Successfully")
 
     if st.button("Analyze Skills"):
        
