@@ -14,7 +14,8 @@ https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app
 - Portfolio Builder Agent
 - Resume Review Agent
 - Interview Preparation Agent
-CareerPilot AI is a multi-agent career development assistant built using Microsoft AI technologies
+- CareerPilot AI is a multi-agent career development assistant built using Microsoft AI technologies
+- Skill Analysis Agent analyzes user skills and passes indentified gaps to the learning path Agent, which generates a personalised roadmap
 
 ## Problem
 
@@ -71,6 +72,14 @@ CareerPilot AI uses multiple AI agents that collaborate through multi-step reaso
 
 CareerPilot AI helps students become industry-ready through personalized guidance, skill-gap analysis, portfolio development, resume enhancement, and interview preparation.
 
+## Potential Impact
+
+CareerPilot AI helps students:
+- Identify missing skills
+- Improve resumes
+- Prepare for interviews
+- Become industry ready
+
 ## Future Enhancements
 
 - Internship Recommendation Agent
@@ -89,3 +98,10 @@ CareerPilot AI demonstrates multi-agent collaboration for:
 - Portfolio Recommendations
 - Resume Improvement
 - Interview Preparation
+
+ ## Safety 
+
+- Input validation for user data
+- Career suggestions are recommendations only
+- Users should verify career decisions independently
+- No sensitive information is stored
