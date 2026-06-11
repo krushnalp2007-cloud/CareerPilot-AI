@@ -295,4 +295,45 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+---
+
+# Step 7: Add Technology Stack Section
+
+At bottom:
+
+```python
+st.subheader("🛠 Technology Stack")
+
+tech = pd.DataFrame({
+    "Layer":[
+        "Frontend",
+        "Backend",
+        "Data",
+        "Visualization",
+        "AI Layer",
+        "Deployment"
+    ],
+    "Technology":[
+        "Streamlit",
+        "Python",
+        "Pandas",
+        "Plotly",
+        "Multi-Agent System",
+        "Streamlit Cloud"
+    ]
+})
+
+st.table(tech)
+st.markdown("---")
+
+st.markdown(
+"""
+<center>
+<h4>CareerPilot AI 🚀</h4>
+<p>Built for Innovation Studio Hackathon 2026</p>
+</center>
+""",
+unsafe_allow_html=True
+)
    
