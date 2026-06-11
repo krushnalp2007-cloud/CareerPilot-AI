@@ -34,21 +34,37 @@ CareerPilot AI uses multiple AI agents that collaborate through multi-step reaso
 - Certification Tracking
 - Career Mentorship
 
-## Architecture
+## Architecture<img width="92" height="150" alt="careerpilot_architecture_v2" src="https://github.com/user-attachments/assets/7cacca48-ba2d-44ad-982a-5ff11940f0df" />
+<img width="92" height="150" alt="careerpilot_architecture_v2" src="https://github.com/user-attachments/assets/053fcd92-b53d-4907-a211-76600d455640" />
 
-User
-↓
-Skill Analysis Agent
-↓
-Learning Path Agent
-↓
-Portfolio Builder Agent
-↓
-Resume Review Agent
-↓
-Interview Preparation Agent
-↓
-Career Guidance Output
+
+# 🏗️ System Architecture
+
+## CareerPilot AI Architecture
+
+![CareerPilot AI Architecture](careerpilot_architecture_v2.svg)
+
+### Workflow
+
+1. User enters skills, career goal, and resume.
+2. Streamlit UI collects and manages data.
+3. AI Agent Core performs analysis.
+4. Analytics Engine calculates skill gaps and scores.
+5. Recommendation Engine suggests learning paths and careers.
+6. Report Generator creates downloadable reports.
+7. Dashboard displays personalized insights.
+
+---
+
+### Technology Stack
+
+- Frontend: Streamlit
+- Backend: Python
+- Data Processing: Pandas
+- Visualization: Plotly
+- AI Layer: Multi-Agent System
+- Deployment: Streamlit Cloud
+- Version Control: GitHub
 
 
 
