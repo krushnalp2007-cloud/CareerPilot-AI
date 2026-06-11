@@ -123,8 +123,18 @@ if page == "Dashboard":
     st.plotly_chart(fig, use_container_width=True)
     st.success("⭐ Current Position: Mid Level")
 
-    st.markdown("""
-    Intern → Junior → Mid Level → Senior → Expert
+    st.markdown("### 🎯 Next Career Goal")
+
+    st.info("""
+    To reach Senior Level:
+
+    ✅ Complete 2 Advanced Projects
+
+    ✅ Earn Microsoft AI Certification
+
+    ✅ Improve Resume Score to 90+
+
+    ✅ Practice 50 Mock Interviews
     """)
 # ---------------- SKILL ANALYSIS ----------------
 elif page == "Skill Analysis":
