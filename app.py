@@ -73,56 +73,6 @@ page = st.sidebar.radio(
     ]
 )
 
-# ---------------- DASHBOARD ----------------
-if page == "Dashboard":
-
-    st.title("🚀 CareerPilot AI Dashboard")
-
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.markdown("""
-        <div class='card'>
-        <h3>Career Level</h3>
-        <h2>Mid Level</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div class='card'>
-        <h3>Resume Score</h3>
-        <h2>85%</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col3:
-        st.markdown("""
-        <div class='card'>
-        <h3>Skill Match</h3>
-        <h2>78%</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.subheader("🎯 Career Progress Score")
-
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=78,
-        title={"text": "Career Match"},
-        gauge={
-            "axis": {"range": [0, 100]},
-            "bar": {"color": "#4DA8FF"}
-        }
-    ))
-    
-    fig.update_layout(height=350)
-    
-    st.plotly_chart(fig, use_container_width=True)
-    st.success("⭐ Current Position: Mid Level")
-
     st.markdown("### 🎯 Next Career Goal")
 
     st.info("""
@@ -299,6 +249,57 @@ elif page == "Interview Prep":
 
     for q in questions:
         st.write("✅", q)
+
+# ---------------- DASHBOARD ----------------
+if page == "Dashboard":
+
+    st.title("🚀 CareerPilot AI Dashboard")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("""
+        <div class='card'>
+        <h3>Career Level</h3>
+        <h2>Mid Level</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+        <div class='card'>
+        <h3>Resume Score</h3>
+        <h2>85%</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown("""
+        <div class='card'>
+        <h3>Skill Match</h3>
+        <h2>78%</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.subheader("🎯 Career Progress Score")
+
+    fig = go.Figure(go.Indicator(
+        mode="gauge+number",
+        value=78,
+        title={"text": "Career Match"},
+        gauge={
+            "axis": {"range": [0, 100]},
+            "bar": {"color": "#4DA8FF"}
+        }
+    ))
+    
+    fig.update_layout(height=350)
+    
+    st.plotly_chart(fig, use_container_width=True)
+    st.success("⭐ Current Position: Mid Level")
+
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
