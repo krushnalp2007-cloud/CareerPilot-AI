@@ -294,12 +294,42 @@ if page == "Dashboard":
             "bar": {"color": "#4DA8FF"}
         }
     ))
-    
+
     fig.update_layout(height=350)
-    
+
     st.plotly_chart(fig, use_container_width=True)
+
     st.success("⭐ Current Position: Mid Level")
 
+    st.markdown("### 🎯 Next Career Goal")
+
+    st.info("""
+To reach Senior Level:
+
+✅ Complete 2 Advanced Projects
+
+✅ Earn Microsoft AI Certification
+
+✅ Improve Resume Score to 90+
+
+✅ Practice 50 Mock Interviews
+""")
+
+    st.markdown("### 📈 Career Growth Timeline")
+
+    timeline_df = pd.DataFrame({
+        "Month": ["Month 1", "Month 2", "Month 3", "Month 4"],
+        "Progress": [25, 50, 75, 100]
+    })
+
+    st.line_chart(timeline_df.set_index("Month"))
+
+    st.markdown("### 🏆 Achievements")
+
+    st.write("✅ Resume Uploaded")
+    st.write("✅ Career Analysis Completed")
+    st.write("✅ Learning Path Generated")
+    st.write("✅ Interview Questions Generated")
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
