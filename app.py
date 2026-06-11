@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import plotly.graph_objects as go
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -105,20 +106,19 @@ if page == "Dashboard":
 
     st.markdown("---")
 
-    st.subheader("Career Roadmap")
+    st.subheader("🎯 Career Progress Score")
 
-    st.progress(25)
-    st.write("Intern")
+    fig = go.Figure(go.Indicator(
+        mode="gauge+number",
+        value=78,
+        title={"text": "Career Match"},
+        gauge={
+            "axis": {"range": [0, 100]},
+            "bar": {"color": "#4DA8FF"}
+        }
+    ))
 
-    st.progress(50)
-    st.write("Junior")
-
-    st.progress(75)
-    st.write("Mid Level")
-
-    st.progress(100)
-    st.write("Senior")
-
+    st.plotly_chart(fig, use_container_width=True)
 # ---------------- SKILL ANALYSIS ----------------
 elif page == "Skill Analysis":
 
