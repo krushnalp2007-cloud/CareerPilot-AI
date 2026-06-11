@@ -1,4 +1,9 @@
 # CareerPilot AI
+![Hackathon](https://img.shields.io/badge/Hackathon-Innovate%20AI%202026-blue)
+![Python](https://img.shields.io/badge/Python-3.11-yellow)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+
+AI-Powered Multi-Agent Career Guidence Platform 🚀
 
 🚀 Live Demo:
 https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app
@@ -61,8 +66,6 @@ CareerPilot AI uses multiple AI agents that collaborate through multi-step reaso
 - AI Layer: Multi-Agent System
 - Deployment: Streamlit Cloud
 - Version Control: GitHub
-
-
 
 ## Impact
 
