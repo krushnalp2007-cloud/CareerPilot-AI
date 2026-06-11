@@ -68,8 +68,8 @@ page = st.sidebar.radio(
         "Skill Analysis",
         "Learning Path",
         "Resume Review",
-        "Interview Prep"
-        "Dashboard",
+        "Interview Prep",
+        "Dashboard"
     ]
 )
 
