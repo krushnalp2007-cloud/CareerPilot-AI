@@ -40,7 +40,6 @@ CareerPilot AI uses multiple AI agents that collaborate through multi-step reaso
 
 ![CareerPilot AI Architecture](careerpilot_architecture_v2.svg)
 ## Architecture<img width="92" height="150" alt="careerpilot_architecture_v2" src="https://github.com/user-attachments/assets/7cacca48-ba2d-44ad-982a-5ff11940f0df" />
-<img width="92" height="150" alt="careerpilot_architecture_v2" src="https://github.com/user-attachments/assets/053fcd92-b53d-4907-a211-76600d455640" />
 
 ### Workflow
 
