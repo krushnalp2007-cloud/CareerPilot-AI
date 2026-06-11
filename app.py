@@ -296,7 +296,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
----
 
 # Step 7: Add Technology Stack Section
 
