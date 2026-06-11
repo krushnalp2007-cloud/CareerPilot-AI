@@ -119,6 +119,27 @@ if page == "Dashboard":
     ))
 
     st.plotly_chart(fig, use_container_width=True)
+    st.subheader("🛣 Career Journey")
+
+    st.markdown("""
+    ### 🔵 Intern
+
+    ⬇️
+
+    ### 🟢 Junior
+
+    ⬇️
+
+    ### 🟡 Mid Level (Current)
+
+    ⬇️
+
+    ### 🟣 Senior
+
+    ⬇️
+
+    ### 🏆 Expert
+    """)
 # ---------------- SKILL ANALYSIS ----------------
 elif page == "Skill Analysis":
 
