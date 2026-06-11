@@ -73,6 +73,56 @@ page = st.sidebar.radio(
     ]
 )
 
+# ---------------- DASHBOARD ----------------
+if page == "Dashboard":
+
+    st.title("🚀 CareerPilot AI Dashboard")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown("""
+        <div class='card'>
+        <h3>Career Level</h3>
+        <h2>Mid Level</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown("""
+        <div class='card'>
+        <h3>Resume Score</h3>
+        <h2>85%</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown("""
+        <div class='card'>
+        <h3>Skill Match</h3>
+        <h2>78%</h2>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    st.subheader("🎯 Career Progress Score")
+
+    fig = go.Figure(go.Indicator(
+        mode="gauge+number",
+        value=78,
+        title={"text": "Career Match"},
+        gauge={
+            "axis": {"range": [0, 100]},
+            "bar": {"color": "#4DA8FF"}
+        }
+    ))
+    
+    fig.update_layout(height=350)
+    
+    st.plotly_chart(fig, use_container_width=True)
+    st.success("⭐ Current Position: Mid Level")
+
     st.markdown("### 🎯 Next Career Goal")
 
     st.info("""
@@ -250,87 +300,6 @@ elif page == "Interview Prep":
     for q in questions:
         st.write("✅", q)
 
-# ---------------- DASHBOARD ----------------
-if page == "Dashboard":
-
-    st.title("🚀 CareerPilot AI Dashboard")
-
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.markdown("""
-        <div class='card'>
-        <h3>Career Level</h3>
-        <h2>Mid Level</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div class='card'>
-        <h3>Resume Score</h3>
-        <h2>85%</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col3:
-        st.markdown("""
-        <div class='card'>
-        <h3>Skill Match</h3>
-        <h2>78%</h2>
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.subheader("🎯 Career Progress Score")
-
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=78,
-        title={"text": "Career Match"},
-        gauge={
-            "axis": {"range": [0, 100]},
-            "bar": {"color": "#4DA8FF"}
-        }
-    ))
-
-    fig.update_layout(height=350)
-
-    st.plotly_chart(fig, use_container_width=True)
-
-    st.success("⭐ Current Position: Mid Level")
-
-    st.markdown("### 🎯 Next Career Goal")
-
-    st.info("""
-To reach Senior Level:
-
-✅ Complete 2 Advanced Projects
-
-✅ Earn Microsoft AI Certification
-
-✅ Improve Resume Score to 90+
-
-✅ Practice 50 Mock Interviews
-""")
-
-    st.markdown("### 📈 Career Growth Timeline")
-
-    timeline_df = pd.DataFrame({
-        "Month": ["Month 1", "Month 2", "Month 3", "Month 4"],
-        "Progress": [25, 50, 75, 100]
-    })
-
-    st.line_chart(timeline_df.set_index("Month"))
-
-    st.markdown("### 🏆 Achievements")
-
-    st.write("✅ Resume Uploaded")
-    st.write("✅ Career Analysis Completed")
-    st.write("✅ Learning Path Generated")
-    st.write("✅ Interview Questions Generated")
-
 # ---------------- FOOTER ----------------
 st.markdown("---")
 
@@ -341,5 +310,4 @@ st.markdown(
         <p>AI Powered Career Guidance Platform</p>
     </center>
     """,
-    unsafe_allow_html=True
-)
+    unsafe_allow_html=TrueI have to make dashboard in last after interview preparation agent. So, convert this code in that output.
