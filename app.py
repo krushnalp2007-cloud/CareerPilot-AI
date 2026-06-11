@@ -7,6 +7,21 @@ st.set_page_config(
     page_icon="🚀",
     layout="wide"
 )
+st.markdown("""
+<div style="
+background: linear-gradient(90deg,#162447,#1F4068);
+padding:25px;
+border-radius:15px;
+text-align:center;
+color:white;
+">
+<h1>🚀 CareerPilot AI</h1>
+<h3>AI-Powered Multi-Agent Career Guidance Platform</h3>
+<p>
+Analyze Skills • Learning Paths • Resume Review • Interview Preparation
+</p>
+</div>
+""", unsafe_allow_html=True)
 
 # ---------------- SESSION STATE ----------------
 if "career" not in st.session_state:
