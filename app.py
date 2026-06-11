@@ -65,11 +65,11 @@ st.sidebar.markdown("Data Analyst Aspirant")
 page = st.sidebar.radio(
     "Navigation",
     [
-        "Dashboard",
         "Skill Analysis",
         "Learning Path",
         "Resume Review",
         "Interview Prep"
+        "Dashboard",
     ]
 )
 
