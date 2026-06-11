@@ -117,28 +117,14 @@ if page == "Dashboard":
             "bar": {"color": "#4DA8FF"}
         }
     ))
-
+    
+    fig.update_layout(height=350)
+    
     st.plotly_chart(fig, use_container_width=True)
-    st.subheader("🛣 Career Journey")
+    st.success("⭐ Current Position: Mid Level")
 
     st.markdown("""
-    ### 🔵 Intern
-
-    ⬇️
-
-    ### 🟢 Junior
-
-    ⬇️
-
-    ### 🟡 Mid Level (Current)
-
-    ⬇️
-
-    ### 🟣 Senior
-
-    ⬇️
-
-    ### 🏆 Expert
+    Intern → Junior → Mid Level → Senior → Expert
     """)
 # ---------------- SKILL ANALYSIS ----------------
 elif page == "Skill Analysis":
