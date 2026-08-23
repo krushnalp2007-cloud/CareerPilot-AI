@@ -405,9 +405,7 @@ The Gemini API key must **never be hard-coded or committed to the GitHub reposit
 
 Use environment variables:
 
-```text
-GEMINI_API_KEY=your_api_key_here
-```
+
 
 The actual secret value should remain outside the repository.
 
