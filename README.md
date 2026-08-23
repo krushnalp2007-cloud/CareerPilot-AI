@@ -1,105 +1,64 @@
-# CareerPilot AI
-![Hackathon](https://img.shields.io/badge/Hackathon-Innovate%20AI%202026-blue)
-![Python](https://img.shields.io/badge/Python-3.11-yellow)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+# 🚀 CareerPilot AI
 
-AI-Powered Multi-Agent Career Guidence Platform 🚀
+## AI-Powered Career Guidance & Skill Assessment Platform
 
-🚀 Live Demo:
-https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app
+CareerPilot AI is an AI-powered career development platform that helps students understand their career readiness using their **career goal, self-entered skills, and resume evidence**.
 
-## Features
-- Skill Analysis Agent
-- Learning Path Agent
-- Resume Review Agent
-- Interview Preparation Agent
-- CareerPilot AI is a multi-agent career development assistant built using Microsoft AI technologies
-- Skill Analysis Agent analyzes user skills and passes indentified gaps to the learning path Agent, which generates a personalised roadmap
+The platform uses **Google Gemini** for dynamic career-skill identification, resume review, evidence-based skill analysis, detailed career guidance, and role-specific interview preparation.
 
-## Problem
-
-Students often struggle to identify skill gaps, create portfolios, improve resumes, and prepare for interviews.
-
-## Solution
-
-CareerPilot AI uses multiple AI agents that collaborate through multi-step reasoning to provide personalized career guidance.
-
-## Technology Stack
-
-- Python
-- Microsoft Foundry
-- AI Agents
-- GitHub Copilot
-- Machine Learning
-
-## Future Scope
-
-- Internship Recommendation
-- Job Matching
-- Certification Tracking
-- Career Mentorship
-
-# 🏗️ System Architecture
-
-## CareerPilot AI Architecture
-
-![CareerPilot AI Architecture](careerpilot_architecture_v2.svg)
-
-### Workflow
-
-1. User enters skills, career goal, and resume.
-2. Streamlit UI collects and manages data.
-3. AI Agent Core performs analysis.
-4. Analytics Engine calculates skill gaps and scores.
-5. Recommendation Engine suggests learning paths and careers.
-6. Report Generator creates downloadable reports.
-7. Dashboard displays personalized insights.
+> **The goal is not to simply generate generic AI advice. CareerPilot AI connects a student's available evidence with the requirements of a selected career and identifies actionable skill gaps.**
 
 ---
 
-### Technology Stack
+## 🌐 Live Demo
 
-- Frontend: Streamlit
-- Backend: Python
-- Data Processing: Pandas
-- Visualization: Plotly
-- AI Layer: Multi-Agent System
-- Deployment: Streamlit Cloud
-- Version Control: GitHub
+🚀 **[Open CareerPilot AI Live Demo](https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app/)**
 
-## Impact
+💻 **[View Source Code on GitHub](https://github.com/krushnalp2007-cloud/CareerPilot-AI)**
 
-CareerPilot AI helps students become industry-ready through personalized guidance, skill-gap analysis, resume enhancement, and interview preparation.
+---
 
-## Potential Impact
+# 🎯 Problem Statement
 
-CareerPilot AI helps students:
-- Identify missing skills
-- Improve resumes
-- Prepare for interviews
-- Become industry ready
+Students often struggle to answer important career-development questions:
 
-## Future Enhancements
+- What skills are actually required for my target career?
+- Which of those skills do I currently have evidence for?
+- Which skills are missing or weak?
+- Does my resume clearly demonstrate my abilities?
+- What should I learn next?
+- How should I prepare for role-specific interviews?
 
-- Internship Recommendation Agent
-- Job Matching Agent
-- Real-time Career Mentor
-- Certification Tracking
-- LinkedIn Profile Analyzer
-- AI Mock Interview System
+Generic career advice often does not consider the student's actual resume and available evidence.
 
- ## Demo
+---
 
-CareerPilot AI demonstrates multi-agent collaboration for:
+# 💡 Solution
 
-- Skill Gap Analysis
-- Learning Path Generation
-- Resume Improvement
-- Interview Preparation
+CareerPilot AI provides a structured career-development workflow:
 
- ## Safety 
-
-- Input validation for user data
-- Career suggestions are recommendations only
-- Users should verify career decisions independently
-- No sensitive information is stored
+```text
+Career Goal
+     │
+     ▼
+Dynamic Career Requirements
+     │
+     ▼
+Student Skills + Resume Evidence
+     │
+     ▼
+Gemini AI Skill Evaluation
+     │
+     ▼
+Deterministic Evidence Guardrails
+     │
+     ▼
+Skill Gaps & Career Match
+     │
+     ├───────────────┐
+     ▼               ▼
+Learning Path    Interview Prep
+     │               │
+     └───────┬───────┘
+             ▼
+        Career Guidance
