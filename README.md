@@ -2,7 +2,7 @@
 
 ### AI-Powered Career Guidance & Skill Assessment Platform
 
-> **Helping students turn their career goals and resume evidence into actionable skill gaps, learning direction, and interview preparation.**
+> **From career goals and resume evidence to actionable skill gaps and career preparation.**
 
 <p align="center">
 
@@ -15,64 +15,67 @@
 
 ---
 
-## 🎯 The Problem
+## 🎯 Problem
 
-Students often know **which career they want**, but struggle to understand:
+Students often know the career they want, but struggle to understand:
 
-- What skills that career actually requires
-- Which skills they already have evidence for
-- Which skills they are missing
+- Which skills that career actually requires
+- Which skills they already have
+- Where their skill gaps are
 - Whether their resume demonstrates their abilities
 - What they should learn next
-- How to prepare for relevant interviews
+- How to prepare for interviews
 
-Generic career advice does not always consider the student's actual skills and resume evidence.
+Generic career advice often does not consider the student's actual skills and resume evidence.
 
 ---
 
-## 💡 The Solution
+## 💡 Solution
 
-**CareerPilot AI** connects a student's:
+**CareerPilot AI** provides personalized career guidance by combining:
 
-**Career Goal + Skills + Resume Evidence**
+**Career Goal + Student Skills + Resume Evidence + Gemini AI**
 
-with AI-powered career analysis to produce:
+to generate:
 
 **Skill Assessment → Skill Gaps → Learning Direction → Interview Preparation**
 
-The goal is to provide **personalized, evidence-based career guidance instead of generic suggestions.**
+The platform focuses on **evidence-based career guidance rather than generic AI suggestions.**
 
 ---
 
 ## ✨ Key Features
 
-| Feature | Purpose |
-|---|---|
-| 📊 **Skill Analysis** | Identifies career-relevant skills and evaluates available evidence |
-| 📄 **Resume Review** | Analyzes PDF/DOCX resumes and extracts useful evidence |
-| 📚 **Learning Path** | Converts identified skill gaps into a structured learning direction |
-| 🎤 **Interview Preparation** | Generates career-specific interview questions |
-| 📈 **Career Dashboard** | Presents career readiness and skill insights |
-| 📥 **Download Reports** | Allows generated results to be saved for later use |
-| 📱 **Responsive UI** | Tested across desktop and mobile devices |
+| | Feature | Description |
+|---|---|---|
+| 📊 | **Skill Analysis** | Evaluates career-relevant skills using student evidence |
+| 📄 | **Resume Review** | Analyzes uploaded PDF and DOCX resumes |
+| 📚 | **Learning Path** | Provides a structured direction based on skill gaps |
+| 🎤 | **Interview Preparation** | Generates career-specific interview questions |
+| 📈 | **Dashboard** | Presents career readiness and skill insights |
+| 📥 | **Downloads** | Allows generated results to be saved |
 
 ---
 
-## 🧠 What Makes CareerPilot AI Different?
+## 🧠 What Makes It Different?
 
-### Evidence-Based Skill Evaluation
+CareerPilot AI combines **Gemini AI with application-level evidence rules**.
 
-CareerPilot AI does not simply display an AI-generated score.
-
-It considers the **strength of available evidence** before presenting the final skill evaluation.
+Instead of blindly accepting an AI-generated skill score, the application considers the strength of the evidence supporting that skill.
 
 ```text
-Resume + Student Skills
-          ↓
-       Gemini AI
-          ↓
-    Evidence Level
-          ↓
-  Score Guardrails
-          ↓
-   Final Skill Score
+Career Goal
+     +
+Student Skills
+     +
+Resume Evidence
+     ↓
+  Gemini AI
+     ↓
+Evidence Evaluation
+     ↓
+Score Guardrails
+     ↓
+Skill Gaps
+     ↓
+Learning + Interview Preparation
