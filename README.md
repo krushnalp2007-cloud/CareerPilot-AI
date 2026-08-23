@@ -1,105 +1,325 @@
-# CareerPilot AI
-![Hackathon](https://img.shields.io/badge/Hackathon-Innovate%20AI%202026-blue)
-![Python](https://img.shields.io/badge/Python-3.11-yellow)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+✨ Core Features
+Module	What it does
+📊 Dashboard	Centralized view of career readiness and skill insights
+📄 Resume Review	Reviews uploaded PDF/DOCX resumes using resume evidence
+🔍 Skill Analysis	Compares career requirements against available student evidence
+📚 Learning Path	Converts identified skill gaps into a structured career-building direction
+🎤 Interview Preparation	Generates role-specific interview questions using Gemini AI
+📥 Downloads	Allows generated reports and interview questions to be downloaded
+📱 Responsive UI	Tested on desktop and mobile devices
+🧠 Evidence-Based AI — The Key Technical Feature
 
-AI-Powered Multi-Agent Career Guidence Platform 🚀
+CareerPilot AI does not blindly display the raw score returned by the AI.
 
-🚀 Live Demo:
-https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app
+The application evaluates the evidence level associated with a skill and applies deterministic constraints before presenting the final score.
 
-## Features
-- Skill Analysis Agent
-- Learning Path Agent
-- Resume Review Agent
-- Interview Preparation Agent
-- CareerPilot AI is a multi-agent career development assistant built using Microsoft AI technologies
-- Skill Analysis Agent analyzes user skills and passes indentified gaps to the learning path Agent, which generates a personalised roadmap
+Evidence levels
+Evidence	Score Treatment
+❌ None	0 — Missing
+🟡 Mentioned	Maximum 50
+🟢 Demonstrated	Maximum 89
+🔵 Strong Demonstrated	80–100
+Example
 
-## Problem
+If a student only mentions a technology in their resume, the system should not treat that as strong technical proficiency.
 
-Students often struggle to identify skill gaps, create portfolios, improve resumes, and prepare for interviews.
+Resume Evidence
+      ↓
+Gemini Evaluation
+      ↓
+Evidence Level
+      ↓
+Deterministic Guardrail
+      ↓
+Final Skill Score
 
-## Solution
+This creates a controlled workflow where AI reasoning is combined with application-level rules.
 
-CareerPilot AI uses multiple AI agents that collaborate through multi-step reasoning to provide personalized career guidance.
+🤖 How Gemini AI is Used
 
-## Technology Stack
+Gemini is used for dynamic AI tasks including:
 
-- Python
-- Microsoft Foundry
-- AI Agents
-- GitHub Copilot
-- Machine Learning
+Career Requirements
 
-## Future Scope
+Determines practical skills relevant to the career entered by the student.
 
-- Internship Recommendation
-- Job Matching
-- Certification Tracking
-- Career Mentorship
+Resume Review
 
-# 🏗️ System Architecture
+Analyzes the supplied resume content and identifies evidence, strengths, and areas for improvement.
 
-## CareerPilot AI Architecture
+Skill Analysis
 
-![CareerPilot AI Architecture](careerpilot_architecture_v2.svg)
+Evaluates career-relevant skills against the student's available evidence.
 
-### Workflow
+Interview Preparation
 
-1. User enters skills, career goal, and resume.
-2. Streamlit UI collects and manages data.
-3. AI Agent Core performs analysis.
-4. Analytics Engine calculates skill gaps and scores.
-5. Recommendation Engine suggests learning paths and careers.
-6. Report Generator creates downloadable reports.
-7. Dashboard displays personalized insights.
+Generates role-specific interview questions based on the selected career and available skill information.
 
----
+CareerPilot AI is not simply a chatbot wrapper.
 
-### Technology Stack
+The application combines AI reasoning with resume processing, structured outputs, evidence rules, scoring guardrails, and a connected career-development workflow.
 
-- Frontend: Streamlit
-- Backend: Python
-- Data Processing: Pandas
-- Visualization: Plotly
-- AI Layer: Multi-Agent System
-- Deployment: Streamlit Cloud
-- Version Control: GitHub
+🏗️ System Architecture
 
-## Impact
+High-Level Architecture
+┌───────────────────────────────┐
+│          Student              │
+│ Career Goal + Skills + Resume │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│        Streamlit UI           │
+└───────────────┬───────────────┘
+                │
+       ┌────────┴────────┐
+       ▼                 ▼
+┌─────────────┐   ┌──────────────┐
+│ Resume      │   │ Student      │
+│ Processing  │   │ Profile      │
+└──────┬──────┘   └──────┬───────┘
+       │                 │
+       └────────┬────────┘
+                ▼
+┌───────────────────────────────┐
+│         Gemini AI             │
+│ Career + Resume + Skill       │
+│ Analysis + Interview Prep     │
+└───────────────┬───────────────┘
+                ▼
+┌───────────────────────────────┐
+│ Deterministic Guardrails      │
+│ Evidence-Based Score Control  │
+└───────────────┬───────────────┘
+                ▼
+       ┌────────┼────────┐
+       ▼        ▼        ▼
+   Skill Gaps  Learning  Interview
+              Path       Preparation
+🛠️ Technology Stack
+Application
+Python
+Streamlit
+AI
+Google Gemini API
+google-genai
+Data & Visualization
+Pandas
+NumPy
+Plotly
+Resume Processing
+PyPDF
+python-docx
+Configuration
+python-dotenv
+Streamlit Secrets
+Deployment
+Streamlit Community Cloud
+Version Control
+Git
+GitHub
+📄 Resume Processing
 
-CareerPilot AI helps students become industry-ready through personalized guidance, skill-gap analysis, resume enhancement, and interview preparation.
+CareerPilot AI supports:
 
-## Potential Impact
+PDF Resume
+    ↓
+PyPDF
+    ↓
+Extracted Text
+    ↓
+AI Analysis
+
+and:
+
+DOCX Resume
+    ↓
+python-docx
+    ↓
+Extracted Text
+    ↓
+AI Analysis
+
+The extracted content is then used as evidence for downstream career analysis.
+
+🔍 Skill Analysis Workflow
+1. User selects / enters a career
+             ↓
+2. Career requirements are generated dynamically
+             ↓
+3. Student skills + resume evidence are collected
+             ↓
+4. Gemini evaluates the available evidence
+             ↓
+5. Evidence-based score guardrails are applied
+             ↓
+6. Skill gaps are identified
+             ↓
+7. Career match and recommendations are displayed
+
+The system is designed not to assume technical proficiency merely from:
+
+Degree
+College
+Academic year
+Career aspiration
+
+The available evidence must support the skill evaluation.
+
+📚 Learning Path
+
+The identified skill gaps are converted into a structured career-building direction.
+
+Typical progression:
+
+Understand Fundamentals
+          ↓
+Strengthen Skill Gaps
+          ↓
+Build Practical Projects
+          ↓
+Document Projects
+          ↓
+Prepare for Interviews
+          ↓
+Build Career-Focused Resume
+          ↓
+Apply for Relevant Opportunities
+🎤 Interview Preparation
+
+CareerPilot AI can generate role-specific interview questions using Gemini AI.
+
+Questions can consider:
+
+Selected career
+Student skills
+Identified skill gaps
+
+Generated questions include:
+
+Category
+Difficulty
+Question
+
+The question set can also be downloaded for later practice.
+
+🔐 Security
+
+API credentials are not committed to the public GitHub repository.
+
+Local Development
+GEMINI_API_KEY=your_api_key_here
+
+The .env file is excluded through .gitignore.
+
+Production Deployment
+
+The Gemini API key is stored using Streamlit Cloud Secrets and accessed at runtime.
+
+Local Development
+       │
+       └── .env
+            │
+            ▼
+       Gemini API
+
+
+Production
+       │
+       └── Streamlit Secrets
+            │
+            ▼
+       Gemini API
+
+⚠️ Never commit API keys or .env files to GitHub.
+
+☁️ Deployment
+
+CareerPilot AI is deployed using Streamlit Community Cloud.
+
+GitHub Repository
+        ↓
+Streamlit Community Cloud
+        ↓
+Secure Secrets
+        ↓
+Public HTTPS Application
+🚀 Live Application
+
+Open CareerPilot AI →
+
+🧪 Testing & Validation
+
+The deployed application has been tested for:
+
+✅ Navigation
+✅ Gemini responses
+✅ Error handling
+✅ PDF resume upload
+✅ DOCX resume processing
+✅ Resume analysis
+✅ Skill analysis
+✅ Evidence-based scoring
+✅ Learning Path flow
+✅ Interview question generation
+✅ Interview question download
+✅ API-key security configuration
+✅ Desktop UI
+✅ Mobile UI
+✅ Mobile button visibility
+✅ Live deployment
+📱 Responsive Design
+
+CareerPilot AI has been tested on both desktop and mobile devices.
+
+Mobile testing included:
+
+Navigation
+Resume upload
+Skill Analysis
+Learning Path
+Interview Preparation
+Button visibility
+Overall usability
+🎯 Project Impact
 
 CareerPilot AI helps students:
-- Identify missing skills
-- Improve resumes
-- Prepare for interviews
-- Become industry ready
 
-## Future Enhancements
+Identify career-specific skill requirements
+Understand their current evidence
+Discover skill gaps
+Improve their resumes
+Create a focused learning direction
+Prepare for relevant interviews
+🚀 Future Scope
 
-- Internship Recommendation Agent
-- Job Matching Agent
-- Real-time Career Mentor
-- Certification Tracking
-- LinkedIn Profile Analyzer
-- AI Mock Interview System
+Potential future enhancements include:
 
- ## Demo
+💼 Internship Recommendation
+🔎 Job Description Matching
+🎓 Certification Tracking
+🔗 LinkedIn Profile Analysis
+🎤 AI Mock Interviews
+📈 Career Progress Tracking
+📷 OCR support for scanned resumes
+📚 More detailed learning resources
+👨‍💻 Developer
+Krushnal Patil
 
-CareerPilot AI demonstrates multi-agent collaboration for:
+B.Tech — Computer Science & Engineering
 
-- Skill Gap Analysis
-- Learning Path Generation
-- Resume Improvement
-- Interview Preparation
+KIT
 
- ## Safety 
+📜 License
 
-- Input validation for user data
-- Career suggestions are recommendations only
-- Users should verify career decisions independently
-- No sensitive information is stored
+This project is licensed under the MIT License.
+
+<p align="center">
+🚀 CareerPilot AI
+
+From career goals to evidence-based career action.
+
+🌐 Live Demo •
+💻 GitHub Repository
+
+</p> ```
