@@ -1,64 +1,65 @@
 # 🚀 CareerPilot AI
 
-## AI-Powered Career Guidance & Skill Assessment Platform
+### AI-Powered Career Guidance & Skill Assessment Platform
 
-CareerPilot AI is an AI-powered career development platform that helps students understand their career readiness using their **career goal, self-entered skills, and resume evidence**.
+> **Turn resume evidence into career direction, skill-gap insights, learning paths, and interview preparation.**
 
-The platform uses **Google Gemini** for dynamic career-skill identification, resume review, evidence-based skill analysis, detailed career guidance, and role-specific interview preparation.
+<p align="center">
 
-> **The goal is not to simply generate generic AI advice. CareerPilot AI connects a student's available evidence with the requirements of a selected career and identifies actionable skill gaps.**
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-CareerPilot_AI-2563EB?style=for-the-badge)](https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app/)
 
----
+[![GitHub](https://img.shields.io/badge/💻_Source_Code-GitHub-111827?style=for-the-badge)](https://github.com/krushnalp2007-cloud/CareerPilot-AI)
 
-## 🌐 Live Demo
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
-🚀 **[Open CareerPilot AI Live Demo](https://careerpilot-ai-e6yuswhz6s5dzfd5uh7hr4.streamlit.app/)**
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
-💻 **[View Source Code on GitHub](https://github.com/krushnalp2007-cloud/CareerPilot-AI)**
-
----
-
-# 🎯 Problem Statement
-
-Students often struggle to answer important career-development questions:
-
-- What skills are actually required for my target career?
-- Which of those skills do I currently have evidence for?
-- Which skills are missing or weak?
-- Does my resume clearly demonstrate my abilities?
-- What should I learn next?
-- How should I prepare for role-specific interviews?
-
-Generic career advice often does not consider the student's actual resume and available evidence.
+</p>
 
 ---
 
-# 💡 Solution
+## 🎯 What is CareerPilot AI?
 
-CareerPilot AI provides a structured career-development workflow:
+CareerPilot AI is an AI-powered career development platform designed to help students understand their career readiness using:
+
+- 🎯 Career goals
+- 🧠 Self-reported skills
+- 📄 Resume evidence
+- 🤖 Gemini AI analysis
+
+Instead of providing generic career advice, CareerPilot AI connects a student's **available evidence** with the requirements of their target career and identifies actionable skill gaps.
+
+---
+
+## ⚡ Why CareerPilot AI?
+
+### From Resume → Evidence → Skill Gaps → Career Action
 
 ```text
-Career Goal
-     │
-     ▼
-Dynamic Career Requirements
-     │
-     ▼
-Student Skills + Resume Evidence
-     │
-     ▼
-Gemini AI Skill Evaluation
-     │
-     ▼
-Deterministic Evidence Guardrails
-     │
-     ▼
-Skill Gaps & Career Match
-     │
-     ├───────────────┐
-     ▼               ▼
-Learning Path    Interview Prep
-     │               │
-     └───────┬───────┘
-             ▼
-        Career Guidance
+        Student Profile
+              │
+              ▼
+        Career Goal
+              │
+              ▼
+    Dynamic Career Requirements
+              │
+              ▼
+   Resume + Student Skill Evidence
+              │
+              ▼
+        Gemini AI Analysis
+              │
+              ▼
+    Evidence-Based Guardrails
+              │
+              ▼
+         Skill Gaps
+          │         │
+          ▼         ▼
+    Learning Path   Interview Prep
+          │         │
+          └────┬────┘
+               ▼
+        Career Development
+        
