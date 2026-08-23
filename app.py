@@ -988,6 +988,92 @@ st.markdown(
         border-radius: 8px;
         margin-top: 8px;
     }
+
+    /* Accessible button styling for desktop and mobile */
+    div.stButton > button,
+    div.stDownloadButton > button {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border: 1px solid #60a5fa !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        min-height: 44px !important;
+    }
+
+    div.stButton > button *,
+    div.stDownloadButton > button * {
+        color: #ffffff !important;
+    }
+
+    div.stButton > button[kind="primary"],
+    div.stButton > button[data-testid="stBaseButton-primary"],
+    div.stDownloadButton > button[kind="primary"] {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border-color: #60a5fa !important;
+    }
+
+    div.stButton > button[kind="primary"] *,
+    div.stButton > button[data-testid="stBaseButton-primary"] *,
+    div.stDownloadButton > button[kind="primary"] * {
+        color: #ffffff !important;
+    }
+
+    div.stButton > button:hover,
+    div.stDownloadButton > button:hover,
+    div.stButton > button:focus,
+    div.stDownloadButton > button:focus,
+    div.stButton > button:active,
+    div.stDownloadButton > button:active {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+        border-color: #93c5fd !important;
+    }
+
+    div.stButton > button:hover *,
+    div.stDownloadButton > button:hover *,
+    div.stButton > button:focus *,
+    div.stDownloadButton > button:focus *,
+    div.stButton > button:active *,
+    div.stDownloadButton > button:active * {
+        color: #ffffff !important;
+    }
+
+    /* File uploader Browse files button */
+    section[data-testid="stFileUploaderDropzone"] button {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border: 1px solid #60a5fa !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+    }
+
+    section[data-testid="stFileUploaderDropzone"] button * {
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stFileUploaderDropzone"] button:hover,
+    section[data-testid="stFileUploaderDropzone"] button:focus {
+        background-color: #1d4ed8 !important;
+        color: #ffffff !important;
+    }
+
+    section[data-testid="stFileUploaderDropzone"] button:hover *,
+    section[data-testid="stFileUploaderDropzone"] button:focus * {
+        color: #ffffff !important;
+    }
+
+    /* Better button sizing on narrow/mobile screens */
+    @media (max-width: 768px) {
+        div.stButton > button,
+        div.stDownloadButton > button,
+        section[data-testid="stFileUploaderDropzone"] button {
+            width: 100% !important;
+            min-height: 46px !important;
+            font-size: 0.95rem !important;
+            white-space: normal !important;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True,
