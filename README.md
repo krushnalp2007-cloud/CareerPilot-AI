@@ -60,15 +60,15 @@ Instead of providing generic career advice, CareerPilot AI connects a student's 
 
 
 ✨ Core Features
-Module	What it does
-📊 Dashboard	Centralized view of career readiness and skill insights
-📄 Resume Review	Reviews uploaded PDF/DOCX resumes using resume evidence
-🔍 Skill Analysis	Compares career requirements against available student evidence
-📚 Learning Path	Converts identified skill gaps into a structured career-building direction
-🎤 Interview Preparation	Generates role-specific interview questions using Gemini AI
-📥 Downloads	Allows generated reports and interview questions to be downloaded
-📱 Responsive UI	Tested on desktop and mobile devices
-🧠 Evidence-Based AI — The Key Technical Feature
+Module	                                           What it does
+📊 Dashboard	                                   Centralized view of career readiness and skill insights
+📄 Resume Review	                           Reviews uploaded PDF/DOCX resumes using resume evidence
+🔍 Skill Analysis	                           Compares career requirements against available student evidence
+📚 Learning Path	                           Converts identified skill gaps into a structured career-building                                                      direction
+🎤 Interview Preparation	                   Generates role-specific interview questions using Gemini AI
+📥 Downloads	                                   Allows generated reports and interview questions to be downloaded
+📱 Responsive UI	                           Tested on desktop and mobile devices
+🧠 Evidence-Based AI —                             The Key Technical Feature
 
 
 CareerPilot AI does not blindly display the raw score returned by the AI.
@@ -79,7 +79,7 @@ The application evaluates the evidence level associated with a skill and applies
 
 Evidence levels
 Evidence	                     Score Treatment
-❌ None - 0	                             Missing
+❌ None - 0	                     Missing
 🟡 Mentioned	                     Maximum 50
 🟢 Demonstrated	                     Maximum 89
 🔵 Strong Demonstrated	             80–100
