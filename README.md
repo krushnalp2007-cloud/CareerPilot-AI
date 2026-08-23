@@ -57,6 +57,8 @@ Instead of providing generic career advice, CareerPilot AI connects a student's 
           └────┬────┘
                ▼
         Career Development
+
+
 ✨ Core Features
 Module	What it does
 📊 Dashboard	Centralized view of career readiness and skill insights
@@ -68,18 +70,22 @@ Module	What it does
 📱 Responsive UI	Tested on desktop and mobile devices
 🧠 Evidence-Based AI — The Key Technical Feature
 
+
 CareerPilot AI does not blindly display the raw score returned by the AI.
+
 
 The application evaluates the evidence level associated with a skill and applies deterministic constraints before presenting the final score.
 
-Evidence levels
-Evidence	Score Treatment
-❌ None	0 — Missing
-🟡 Mentioned	Maximum 50
-🟢 Demonstrated	Maximum 89
-🔵 Strong Demonstrated	80–100
-Example
 
+Evidence levels
+Evidence	                     Score Treatment
+❌ None - 0	                             Missing
+🟡 Mentioned	                     Maximum 50
+🟢 Demonstrated	                     Maximum 89
+🔵 Strong Demonstrated	             80–100
+
+
+Example
 If a student only mentions a technology in their resume, the system should not treat that as strong technical proficiency.
 
 Resume Evidence
@@ -93,6 +99,7 @@ Deterministic Guardrail
 Final Skill Score
 
 This creates a controlled workflow where AI reasoning is combined with application-level rules.
+
 
 🤖 How Gemini AI is Used
 
@@ -117,6 +124,7 @@ Generates role-specific interview questions based on the selected career and ava
 CareerPilot AI is not simply a chatbot wrapper.
 
 The application combines AI reasoning with resume processing, structured outputs, evidence rules, scoring guardrails, and a connected career-development workflow.
+
 
 🏗️ System Architecture
 
@@ -155,6 +163,8 @@ High-Level Architecture
        ▼        ▼        ▼
    Skill Gaps  Learning  Interview
               Path       Preparation
+
+
 🛠️ Technology Stack
 Application
 Python
@@ -177,6 +187,8 @@ Streamlit Community Cloud
 Version Control
 Git
 GitHub
+
+
 📄 Resume Processing
 
 CareerPilot AI supports:
@@ -340,6 +352,7 @@ Learning Path
 Interview Preparation
 Button visibility
 Overall usability
+
 🎯 Project Impact
 
 CareerPilot AI helps students:
@@ -350,6 +363,7 @@ Discover skill gaps
 Improve their resumes
 Create a focused learning direction
 Prepare for relevant interviews
+
 🚀 Future Scope
 
 Potential future enhancements include:
@@ -362,6 +376,8 @@ Potential future enhancements include:
 📈 Career Progress Tracking
 📷 OCR support for scanned resumes
 📚 More detailed learning resources
+
+
 👨‍💻 Developer
 Krushnal Patil
 
